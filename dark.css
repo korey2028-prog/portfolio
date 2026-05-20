@@ -1037,6 +1037,18 @@ main, footer, nav { position: relative; z-index: 1; }
   transform: translateY(0);
 }
 
+/* Hero display: focus-in blur effect */
+.display.reveal {
+  filter: blur(10px);
+  transition:
+    opacity 1.4s var(--ease),
+    transform 1.4s var(--ease),
+    filter 1.4s var(--ease);
+}
+.display.reveal.visible {
+  filter: blur(0);
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */

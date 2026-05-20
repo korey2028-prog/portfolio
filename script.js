@@ -16,7 +16,13 @@
       'nav.skills': '技能',
       'nav.website': '作品',
       'nav.contact': '联系',
+      'nav.now': '动态',
       'nav.cta': '简历',
+      'proj.more': '了解更多 →',
+      'notify.placeholder': 'your@email.com',
+      'notify.button': '通知我上线 →',
+      'notify.hint': '上线时给你发邮件。不订阅、不打扰、不卖给任何人。',
+      'notify.thanks': '收到！上线时第一时间联系你',
 
       'hero.title': '反事实归因者。<br><span class="grad">把模糊困扰，</span><br>变成具体可解决的真问题。',
       'hero.sub': '用维特根斯坦的语言分析 + Pearl 的因果推断，重新拆解一个问题；<br>再让 AI 协作工程把答案变成可运行的工具。',
@@ -121,7 +127,13 @@
       'nav.skills': 'Skills',
       'nav.website': 'Site',
       'nav.contact': 'Contact',
+      'nav.now': 'Now',
       'nav.cta': 'Résumé',
+      'proj.more': 'Read more →',
+      'notify.placeholder': 'your@email.com',
+      'notify.button': 'Notify me →',
+      'notify.hint': 'I’ll send you a single email when it goes live. No newsletter. No spam.',
+      'notify.thanks': 'Got it. I’ll reach out the moment it’s live.',
 
       'hero.title': 'Counterfactual reasoner.<br><span class="grad">From vague troubles,</span><br>to specific, solvable problems.',
       'hero.sub': 'Wittgenstein’s language analysis + Pearl’s causal inference to dissect a problem;<br>then AI craft to turn the answer into runnable software.',
@@ -231,12 +243,27 @@
       if (!(key in dict)) return;
       el.innerHTML = dict[key];
     });
+    document.querySelectorAll('[data-i18n-attr]').forEach((el) => {
+      const attr = el.getAttribute('data-i18n-attr');
+      const key = el.getAttribute('data-i18n-key');
+      if (attr && key && key in dict) el.setAttribute(attr, dict[key]);
+    });
     document.querySelectorAll('[data-lang-toggle]').forEach((btn) => {
       btn.textContent = dict['lang.label'];
       btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
     });
     try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* ignore */ }
   }
+
+  // Inject "Read more" affordance into each project card before lang applies
+  document.querySelectorAll('.proj-card').forEach((card) => {
+    if (card.querySelector('.proj-more')) return;
+    const span = document.createElement('span');
+    span.className = 'proj-more';
+    span.setAttribute('data-i18n', 'proj.more');
+    span.textContent = '了解更多 →';
+    card.appendChild(span);
+  });
 
   function getInitialLang() {
     try {
@@ -300,6 +327,34 @@
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       showToast();
+    });
+  });
+
+  // -------------------------
+  // Notify form (TEM-4 workbench email signup)
+  // -------------------------
+  document.querySelectorAll('[data-notify]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = (form.email?.value || '').trim();
+      if (!email) return;
+      const subject = currentLang === 'en'
+        ? 'Notify me when TEM-4 Workbench launches'
+        : '通知我专四工作台上线';
+      const body = currentLang === 'en'
+        ? `Please notify ${email} when the TEM-4 Workbench is live.`
+        : `请在专四工作台上线时通知 ${email}。`;
+      const url = 'mailto:korey2028@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+      window.location.href = url;
+      // Toast feedback
+      const dict = i18n[currentLang] || i18n.zh;
+      toast.textContent = dict['notify.thanks'];
+      toast.classList.add('show');
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => toast.classList.remove('show'), 3200);
+      form.reset();
     });
   });
 

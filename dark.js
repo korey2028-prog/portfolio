@@ -150,6 +150,70 @@
   reveals.forEach((el) => io.observe(el));
 
   // -------------------------
+  // Terminal typewriter (project 03 device)
+  // -------------------------
+  const term = document.querySelector('.term');
+  const termHost = term && term.closest('.device');
+  if (term && termHost) {
+    const original = term.innerHTML;
+    // Tokenize: each item is either a tag or a single char
+    const tokens = [];
+    let i = 0;
+    while (i < original.length) {
+      if (original[i] === '<') {
+        const end = original.indexOf('>', i);
+        tokens.push(original.slice(i, end + 1));
+        i = end + 1;
+      } else if (original[i] === '&') {
+        const end = original.indexOf(';', i);
+        if (end > -1 && end - i < 8) {
+          tokens.push(original.slice(i, end + 1));
+          i = end + 1;
+        } else {
+          tokens.push(original[i]); i++;
+        }
+      } else {
+        tokens.push(original[i]); i++;
+      }
+    }
+    // Reserve the visual space, but hide the content via a wrapping invisible clone
+    term.style.minHeight = term.getBoundingClientRect().height + 'px';
+    term.innerHTML = '';
+
+    let played = false;
+    const playTyping = () => {
+      if (played) return;
+      played = true;
+      let k = 0;
+      const tick = () => {
+        if (k >= tokens.length) {
+          term.style.minHeight = '';
+          return;
+        }
+        const tok = tokens[k++];
+        term.innerHTML += tok;
+        let delay = (tok.length > 1 && tok[0] === '<') ? 0 : 18;
+        if (tok === '\n') delay = 60;
+        setTimeout(tick, delay);
+      };
+      tick();
+    };
+    const checkAndPlay = () => {
+      if (played) return;
+      const r = termHost.getBoundingClientRect();
+      // Trigger when 25% of the device is visible
+      const triggerY = r.top + r.height * 0.25;
+      if (triggerY < window.innerHeight && r.bottom > 0) {
+        playTyping();
+        window.removeEventListener('scroll', checkAndPlay);
+      }
+    };
+    window.addEventListener('scroll', checkAndPlay, { passive: true });
+    // Initial check on load (in case already in view)
+    setTimeout(checkAndPlay, 200);
+  }
+
+  // -------------------------
   // Toast for resume placeholder
   // -------------------------
   const toast = document.getElementById('toast');
