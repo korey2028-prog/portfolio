@@ -132,6 +132,27 @@
   onScroll();
 
   // -------------------------
+  // Mobile burger menu
+  // -------------------------
+  const burger = document.getElementById('navBurger');
+  if (burger) {
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nav.classList.toggle('menu-open');
+      burger.setAttribute('aria-expanded',
+        nav.classList.contains('menu-open') ? 'true' : 'false');
+    });
+    document.querySelectorAll('.nav-links a').forEach((a) => {
+      a.addEventListener('click', () => nav.classList.remove('menu-open'));
+    });
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('menu-open')) return;
+      if (nav.contains(e.target)) return;
+      nav.classList.remove('menu-open');
+    });
+  }
+
+  // -------------------------
   // Reveal on scroll
   // -------------------------
   const reveals = document.querySelectorAll('.reveal');

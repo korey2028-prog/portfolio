@@ -359,32 +359,24 @@
   });
 
   // -------------------------
-  // Mobile burger
+  // Mobile burger menu
   // -------------------------
   const burger = document.getElementById('navBurger');
   if (burger) {
     burger.addEventListener('click', () => {
-      const links = document.querySelector('.nav-links');
-      if (!links) return;
-      const open = links.style.display === 'flex';
-      if (open) {
-        links.style.cssText = '';
-      } else {
-        links.style.cssText = `
-          display: flex;
-          position: absolute;
-          flex-direction: column;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background: rgba(251,251,253,0.96);
-          padding: 20px 24px;
-          width: 100%;
-          gap: 18px;
-          border-bottom: 1px solid rgba(0,0,0,0.08);
-          backdrop-filter: blur(20px);
-        `;
-      }
+      nav.classList.toggle('menu-open');
+      burger.setAttribute('aria-expanded',
+        nav.classList.contains('menu-open') ? 'true' : 'false');
+    });
+    // close on nav link tap
+    document.querySelectorAll('.nav-links a').forEach((a) => {
+      a.addEventListener('click', () => nav.classList.remove('menu-open'));
+    });
+    // close on outside tap
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('menu-open')) return;
+      if (nav.contains(e.target)) return;
+      nav.classList.remove('menu-open');
     });
   }
 
