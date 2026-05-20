@@ -114,6 +114,25 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
 
+.nav-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-secondary);
+  transition: all 0.25s var(--ease-out);
+  margin-right: 4px;
+}
+.nav-theme svg { width: 16px; height: 16px; }
+.nav-theme:hover {
+  background: rgba(94, 92, 230, 0.1);
+  color: var(--accent);
+  transform: translateY(-1px) rotate(-12deg);
+}
+
 .nav-burger {
   display: none;
   flex-direction: column;

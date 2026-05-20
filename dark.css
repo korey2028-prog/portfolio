@@ -221,12 +221,30 @@ main, footer, nav { position: relative; z-index: 1; }
   background: rgba(255,255,255,0.04);
 }
 
+.nav-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-pill);
+  color: var(--ink-3);
+  margin-left: 4px;
+  transition: all var(--t-fast) var(--ease);
+}
+.nav-theme svg { width: 16px; height: 16px; }
+.nav-theme:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
+  transform: rotate(20deg);
+}
+
 .nav-action {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 8px 14px 8px 16px;
-  margin-left: 6px;
+  margin-left: 4px;
   border-radius: var(--r-pill);
   font-size: 13px;
   font-weight: 600;
