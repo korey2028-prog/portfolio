@@ -35,6 +35,7 @@
       <li><a href="#notes">Notes</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-lang" data-lang-toggle aria-label="Switch language">EN</button>
     <a class="nav-theme" href="index.html" aria-label="切换到浅色模式" title="浅色模式">
       <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="10" cy="10" r="3.4"/>
@@ -58,13 +59,13 @@
         Independent · 2026
       </p>
 
-      <h1 class="display reveal" data-delay="120">
+      <h1 class="display reveal" data-delay="120" data-i18n="hero.title">
         反事实归因者，<br>
         把模糊的困扰，<br>
         变成<span class="display-em">可运行的工具</span>。
       </h1>
 
-      <p class="lede reveal" data-delay="240">
+      <p class="lede reveal" data-delay="240" data-i18n="hero.lede">
         Korey — 用 Wittgenstein 的语言分析拆问题，<br>
         用 Pearl 的因果框架找原因，<br>
         用 Claude Code 把答案造成产品。
@@ -77,7 +78,7 @@
         </a>
         <button class="btn btn-quiet" data-resume>
           <span>Résumé</span>
-          <em class="btn-meta">PDF · 即将上线</em>
+          <em class="btn-meta" data-i18n="hero.cta.resume.meta">PDF · 即将上线</em>
         </button>
       </div>
     </div>
@@ -92,7 +93,7 @@
   <section class="section section-about" id="about">
     <div class="container container-narrow">
       <p class="section-tag reveal">About</p>
-      <p class="about-lead reveal" data-delay="80">
+      <p class="about-lead reveal" data-delay="80" data-i18n="about.lead">
         英语专业出身，长期在做的其实是同一件事 ——<br>
         把模糊的问题拆到原子级，找到那个可以换的变量，<br>
         再让 AI 协作工程把答案变成可运行的产品。
@@ -101,22 +102,22 @@
       <div class="about-stats reveal" data-delay="200">
         <div class="stat-block">
           <div class="stat-num">228</div>
-          <div class="stat-lbl">Obsidian 笔记</div>
+          <div class="stat-lbl" data-i18n="about.stat1.label">Obsidian 笔记</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-block">
           <div class="stat-num">M1–M9</div>
-          <div class="stat-lbl">身体 OS 因果模型</div>
+          <div class="stat-lbl" data-i18n="about.stat2.label">身体 OS 因果模型</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-block">
           <div class="stat-num">02</div>
-          <div class="stat-lbl">已结业课程</div>
+          <div class="stat-lbl" data-i18n="about.stat3.label">已结业课程</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-block">
           <div class="stat-num">06·2026</div>
-          <div class="stat-lbl">TEM-4 备考中</div>
+          <div class="stat-lbl" data-i18n="about.stat4.label">TEM-4 备考中</div>
         </div>
       </div>
     </div>
@@ -127,7 +128,7 @@
     <div class="container">
       <div class="section-head">
         <p class="section-tag reveal">Selected Work</p>
-        <h2 class="section-h reveal" data-delay="80">三个并行的项目，<br>每一个都在回答一个具体的问题。</h2>
+        <h2 class="section-h reveal" data-delay="80" data-i18n="work.h">三个并行的项目，<br>每一个都在回答一个具体的问题。</h2>
       </div>
 
       <!-- Project 01 -->
@@ -140,8 +141,8 @@
               In development · Public release H2 2026
             </span>
           </div>
-          <h3>专四工作台</h3>
-          <p>
+          <h3 data-i18n="proj1.title">专四工作台</h3>
+          <p data-i18n="proj1.desc">
             为自己 2026 年 6 月通过英语专四而做的私人工具，慢慢演化成了一个完整的备考工作台。
             真题闯关、语法专项、听写训练、错词回采、战绩面板 ——
             一个备考学生需要的所有东西，被一致地组织在同一个界面下。
@@ -149,7 +150,7 @@
           <ul class="proj-tags">
             <li>Exam UX</li>
             <li>Spaced repetition</li>
-            <li>真人音源</li>
+            <li data-i18n="proj1.tag3">真人音源</li>
           </ul>
         </div>
         <div class="proj-visual">
@@ -160,7 +161,7 @@
             </div>
             <div class="device-body">
               <div class="exam-card">
-                <p class="exam-q">完形 · 2024 · Q12</p>
+                <p class="exam-q" data-i18n="proj1.mock.q">完形 · 2024 · Q12</p>
                 <p class="exam-stem">The new policy was unpopular at first; <em>____</em>, it was eventually accepted.</p>
                 <div class="exam-opts">
                   <label class="opt opt-active">
@@ -204,8 +205,8 @@
               Ongoing · Personal research
             </span>
           </div>
-          <h3>身体 OS</h3>
-          <p>
+          <h3 data-i18n="proj2.title">身体 OS</h3>
+          <p data-i18n="proj2.desc">
             一个用 Pearl 因果框架建模"身体"的私人系统。
             9 个机制模型 + 3 个操作协议，处理"睡了很久还是没精神"这一类问题：
             从中介变量入手，找到那个可以换的环节，而不是再加一个补救动作。
@@ -242,19 +243,19 @@
                 <!-- nodes -->
                 <g class="node">
                   <rect x="14" y="42" width="112" height="36" rx="10" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.12)"/>
-                  <text x="70" y="65" text-anchor="middle" fill="#e8e8ea" font-size="12" font-family="Inter">睡眠时长</text>
+                  <text x="70" y="65" text-anchor="middle" fill="#e8e8ea" font-size="12" font-family="Inter" data-i18n="proj2.mock.n1">睡眠时长</text>
                 </g>
                 <g class="node">
                   <rect x="14" y="142" width="112" height="36" rx="10" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.12)"/>
-                  <text x="70" y="165" text-anchor="middle" fill="#e8e8ea" font-size="12" font-family="Inter">作息节律</text>
+                  <text x="70" y="165" text-anchor="middle" fill="#e8e8ea" font-size="12" font-family="Inter" data-i18n="proj2.mock.n2">作息节律</text>
                 </g>
                 <g class="node node-mediator">
                   <rect x="138" y="92" width="92" height="36" rx="10" fill="rgba(120,180,255,0.10)" stroke="rgba(120,180,255,0.45)"/>
-                  <text x="184" y="115" text-anchor="middle" fill="#cfe2ff" font-size="12" font-family="Inter">恢复质量</text>
+                  <text x="184" y="115" text-anchor="middle" fill="#cfe2ff" font-size="12" font-family="Inter" data-i18n="proj2.mock.n3">恢复质量</text>
                 </g>
                 <g class="node node-outcome">
                   <rect x="238" y="92" width="108" height="36" rx="10" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.16)"/>
-                  <text x="292" y="115" text-anchor="middle" fill="#f5f5f7" font-size="12" font-family="Inter">日间精力</text>
+                  <text x="292" y="115" text-anchor="middle" fill="#f5f5f7" font-size="12" font-family="Inter" data-i18n="proj2.mock.n4">日间精力</text>
                 </g>
 
                 <!-- mediator label -->
@@ -275,8 +276,8 @@
               Daily driver · Multi-host
             </span>
           </div>
-          <h3>AI 协作工作流</h3>
-          <p>
+          <h3 data-i18n="proj3.title">AI 协作工作流</h3>
+          <p data-i18n="proj3.desc">
             Claude Code 与 Codex 双平台 Skill 系统。
             手机 Gemini 做轻量捕获，桌面 Claude 做深加工，每个领域都有自己的 Skill 入口。
             目标不是更长的 Prompt，是把 Prompt 封装成可被调用的产品。
@@ -317,13 +318,13 @@
     <div class="container">
       <div class="section-head">
         <p class="section-tag reveal">Field Notes</p>
-        <h2 class="section-h reveal" data-delay="80">几条还在用的观察。</h2>
+        <h2 class="section-h reveal" data-delay="80" data-i18n="notes.h">几条还在用的观察。</h2>
       </div>
 
       <div class="notes-list">
         <figure class="note reveal">
           <span class="note-num">01</span>
-          <blockquote>
+          <blockquote data-i18n="note1.quote">
             把问题的语言拆到原子级，问题往往自己消解。
           </blockquote>
           <figcaption>On Wittgenstein</figcaption>
@@ -331,7 +332,7 @@
 
         <figure class="note reveal" data-delay="120">
           <span class="note-num">02</span>
-          <blockquote>
+          <blockquote data-i18n="note2.quote">
             重要的不是"相关"，是反事实 ——<br>
             <em>如果换掉这一个变量，结果会变吗？</em>
           </blockquote>
@@ -340,7 +341,7 @@
 
         <figure class="note reveal" data-delay="240">
           <span class="note-num">03</span>
-          <blockquote>
+          <blockquote data-i18n="note3.quote">
             好的 AI 协作不是更长的 Prompt，<br>
             是把 Prompt 封装成可被调用的 Skill。
           </blockquote>
@@ -349,7 +350,7 @@
 
         <figure class="note reveal" data-delay="360">
           <span class="note-num">04</span>
-          <blockquote>
+          <blockquote data-i18n="note4.quote">
             "睡了很久还是没精神。"<br>
             <em>问题不在睡眠时长，在睡眠之外的某个中介。</em>
           </blockquote>
@@ -363,11 +364,11 @@
   <section class="section section-contact" id="contact">
     <div class="container container-narrow center">
       <p class="section-tag reveal">Get in touch</p>
-      <h2 class="contact-h reveal" data-delay="80">
+      <h2 class="contact-h reveal" data-delay="80" data-i18n="contact.h">
         慢一点也行，<br>
         把问题说清楚就好。
       </h2>
-      <p class="contact-lede reveal" data-delay="200">
+      <p class="contact-lede reveal" data-delay="200" data-i18n="contact.lede">
         商业咨询、AI 协作、健康营养，<br>
         或者只是想认识一下 —— 都欢迎邮件。
       </p>
@@ -383,7 +384,7 @@
 
 <footer class="foot">
   <div class="container foot-row">
-    <span class="foot-c">© 2026 Korey · 用拆问题的方法过日子</span>
+    <span class="foot-c" data-i18n="foot.c">© 2026 Korey · 用拆问题的方法过日子</span>
     <a class="foot-switch" href="index.html">
       <svg viewBox="0 0 16 16" width="12" height="12"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.3"/></svg>
       <span>Try light variant</span>

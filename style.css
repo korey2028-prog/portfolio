@@ -114,6 +114,31 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
 
+.nav-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 6px;
+  border-radius: var(--radius-pill);
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  transition: all 0.25s var(--ease-out);
+  cursor: pointer;
+}
+.nav-lang:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(94, 92, 230, 0.06);
+}
+
 .nav-theme {
   display: inline-flex;
   align-items: center;

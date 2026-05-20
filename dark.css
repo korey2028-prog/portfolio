@@ -221,6 +221,30 @@ main, footer, nav { position: relative; z-index: 1; }
   background: rgba(255,255,255,0.04);
 }
 
+.nav-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 30px;
+  padding: 0 10px;
+  margin-left: 4px;
+  border-radius: var(--r-pill);
+  font-family: "JetBrains Mono", "SF Mono", monospace;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  background: transparent;
+  border: 1px solid var(--line-1);
+  transition: all var(--t-fast) var(--ease);
+}
+.nav-lang:hover {
+  color: var(--ink);
+  border-color: var(--line-3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
 .nav-theme {
   display: inline-flex;
   align-items: center;

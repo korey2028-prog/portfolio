@@ -16,18 +16,19 @@
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">Korey.</a>
     <ul class="nav-links">
-      <li><a href="#about">关于</a></li>
-      <li><a href="#projects">项目</a></li>
-      <li><a href="#skills">技能</a></li>
-      <li><a href="#website">作品</a></li>
-      <li><a href="#contact">联系</a></li>
+      <li><a href="#about" data-i18n="nav.about">关于</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">项目</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">技能</a></li>
+      <li><a href="#website" data-i18n="nav.website">作品</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">联系</a></li>
     </ul>
+    <button class="nav-lang" data-lang-toggle aria-label="Switch language">EN</button>
     <a class="nav-theme" href="dark.html" aria-label="切换到深色模式" title="深色模式">
       <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M15 11.5A6 6 0 1 1 8.5 5a5 5 0 0 0 6.5 6.5z"/>
       </svg>
     </a>
-    <button class="nav-cta" data-resume>简历</button>
+    <button class="nav-cta" data-resume data-i18n="nav.cta">简历</button>
     <button class="nav-burger" id="navBurger" aria-label="菜单">
       <span></span><span></span><span></span>
     </button>
@@ -45,20 +46,20 @@
     </div>
     <div class="container">
       <p class="hero-eyebrow reveal">Hi, I'm Korey.</p>
-      <h1 class="hero-title reveal" data-delay="100">
+      <h1 class="hero-title reveal" data-delay="100" data-i18n="hero.title">
         反事实归因者。<br>
         <span class="grad">把模糊困扰，</span><br>
         变成具体可解决的真问题。
       </h1>
-      <p class="hero-sub reveal" data-delay="200">
+      <p class="hero-sub reveal" data-delay="200" data-i18n="hero.sub">
         用维特根斯坦的语言分析 + Pearl 的因果推断，重新拆解一个问题；<br>
         再让 AI 协作工程把答案变成可运行的工具。
       </p>
       <div class="hero-cta reveal" data-delay="300">
-        <button class="btn btn-primary" data-resume>
+        <button class="btn btn-primary" data-resume data-i18n="hero.cta.resume">
           下载简历 <span class="btn-meta">PDF · 即将上线</span>
         </button>
-        <a class="btn btn-ghost" href="#projects">
+        <a class="btn btn-ghost" href="#projects" data-i18n="hero.cta.browse">
           浏览项目 <span class="arrow">→</span>
         </a>
       </div>
@@ -71,14 +72,14 @@
   <!-- ABOUT -->
   <section class="section section-about" id="about">
     <div class="container narrow">
-      <p class="section-label reveal">关于</p>
-      <h2 class="section-title reveal">
+      <p class="section-label reveal" data-i18n="about.tag">关于</p>
+      <h2 class="section-title reveal" data-i18n="about.title">
         不写代码的工程师，<br>
         不开店的咨询师。
       </h2>
       <div class="about-text reveal">
-        <p>英语专业背景，深度学习过维特根斯坦《逻辑哲学论》和 Pearl《为什么》。一边在做营养健康的因果建模 <em>（身体 OS / M1–M9）</em>，一边在用 Claude Code + Codex 双平台搭自己的 Skill 工作流。</p>
-        <p>做事方法很简单：先把概念拆到原子级，再问"如果换掉这一个变量会怎样"，最后让 AI 把推理变成可运行的产品。这也是为什么我把自己叫做<strong>反事实归因者</strong>。</p>
+        <p data-i18n="about.p1">英语专业背景，深度学习过维特根斯坦《逻辑哲学论》和 Pearl《为什么》。一边在做营养健康的因果建模 <em>（身体 OS / M1–M9）</em>，一边在用 Claude Code + Codex 双平台搭自己的 Skill 工作流。</p>
+        <p data-i18n="about.p2">做事方法很简单：先把概念拆到原子级，再问"如果换掉这一个变量会怎样"，最后让 AI 把推理变成可运行的产品。这也是为什么我把自己叫做<strong>反事实归因者</strong>。</p>
       </div>
     </div>
   </section>
@@ -86,62 +87,62 @@
   <!-- PROJECTS -->
   <section class="section section-gray" id="projects">
     <div class="container">
-      <p class="section-label reveal">项目</p>
-      <h2 class="section-title reveal">我在做的事。</h2>
-      <p class="section-sub reveal">六个并行的项目，每一个都在回答一个具体的问题。</p>
+      <p class="section-label reveal" data-i18n="projects.tag">项目</p>
+      <h2 class="section-title reveal" data-i18n="projects.title">我在做的事。</h2>
+      <p class="section-sub reveal" data-i18n="projects.sub">六个并行的项目，每一个都在回答一个具体的问题。</p>
 
       <div class="proj-grid">
         <article class="proj-card reveal">
-          <div class="proj-badge proj-badge-live">开发中</div>
-          <h3>专四工作台</h3>
-          <p>给全国备考英语专四的学生，一个真正像样的复习工作台。原本是为自己 2026-06 考试做的私人工具。</p>
+          <div class="proj-badge proj-badge-live" data-i18n="proj1.badge">开发中</div>
+          <h3 data-i18n="proj1.title">专四工作台</h3>
+          <p data-i18n="proj1.desc">给全国备考英语专四的学生，一个真正像样的复习工作台。原本是为自己 2026-06 考试做的私人工具。</p>
           <div class="proj-tags">
-            <span>真题闯关</span><span>语法卡片</span><span>错词回采</span>
+            <span data-i18n="proj1.tag1">真题闯关</span><span data-i18n="proj1.tag2">语法卡片</span><span data-i18n="proj1.tag3">错词回采</span>
           </div>
         </article>
 
         <article class="proj-card reveal">
-          <div class="proj-badge">持续迭代</div>
-          <h3>身体 OS</h3>
-          <p>自己搭的健康因果模型系统：9 个机制模型 + 3 个操作协议，用 Pearl 中介分析法处理"睡了很久还是没精神"这种问题。</p>
+          <div class="proj-badge" data-i18n="proj2.badge">持续迭代</div>
+          <h3 data-i18n="proj2.title">身体 OS</h3>
+          <p data-i18n="proj2.desc">自己搭的健康因果模型系统：9 个机制模型 + 3 个操作协议，用 Pearl 中介分析法处理"睡了很久还是没精神"这种问题。</p>
           <div class="proj-tags">
-            <span>因果建模</span><span>营养</span><span>睡眠</span>
+            <span data-i18n="proj2.tag1">因果建模</span><span data-i18n="proj2.tag2">营养</span><span data-i18n="proj2.tag3">睡眠</span>
           </div>
         </article>
 
         <article class="proj-card reveal">
-          <div class="proj-badge">日常运营</div>
-          <h3>AI 协作工作流</h3>
-          <p>Claude Code + Codex 双平台 Skill 系统。手机 Gemini 捕获 / 桌面 Claude 深加工的节奏化路由。</p>
+          <div class="proj-badge" data-i18n="proj3.badge">日常运营</div>
+          <h3 data-i18n="proj3.title">AI 协作工作流</h3>
+          <p data-i18n="proj3.desc">Claude Code + Codex 双平台 Skill 系统。手机 Gemini 捕获 / 桌面 Claude 深加工的节奏化路由。</p>
           <div class="proj-tags">
-            <span>Skill 设计</span><span>Agent 工作流</span><span>Prompt 工程</span>
+            <span data-i18n="proj3.tag1">Skill 设计</span><span data-i18n="proj3.tag2">Agent 工作流</span><span data-i18n="proj3.tag3">Prompt 工程</span>
           </div>
         </article>
 
         <article class="proj-card reveal">
-          <div class="proj-badge">长期</div>
-          <h3>公众号长文</h3>
-          <p>把 vault 里的因果模型和方法论翻译成大众读得懂的长文。已发表《为什么睡了很久还是没精神》等深度内容。</p>
+          <div class="proj-badge" data-i18n="proj4.badge">长期</div>
+          <h3 data-i18n="proj4.title">公众号长文</h3>
+          <p data-i18n="proj4.desc">把 vault 里的因果模型和方法论翻译成大众读得懂的长文。已发表《为什么睡了很久还是没精神》等深度内容。</p>
           <div class="proj-tags">
-            <span>内容创作</span><span>科普写作</span><span>方法论</span>
+            <span data-i18n="proj4.tag1">内容创作</span><span data-i18n="proj4.tag2">科普写作</span><span data-i18n="proj4.tag3">方法论</span>
           </div>
         </article>
 
         <article class="proj-card reveal">
-          <div class="proj-badge">228 篇</div>
-          <h3>Obsidian 知识库</h3>
-          <p>三端同步的私人知识系统，按"自我 / 商业 / 关系 / 元 / 外部思想"分类，配 Dataview 实现笔记关系网络。</p>
+          <div class="proj-badge" data-i18n="proj5.badge">228 篇</div>
+          <h3 data-i18n="proj5.title">Obsidian 知识库</h3>
+          <p data-i18n="proj5.desc">三端同步的私人知识系统，按"自我 / 商业 / 关系 / 元 / 外部思想"分类，配 Dataview 实现笔记关系网络。</p>
           <div class="proj-tags">
-            <span>知识管理</span><span>Dataview</span><span>三端同步</span>
+            <span data-i18n="proj5.tag1">知识管理</span><span>Dataview</span><span data-i18n="proj5.tag3">三端同步</span>
           </div>
         </article>
 
         <article class="proj-card reveal">
-          <div class="proj-badge">实战落地</div>
-          <h3>don 哥线下课实践</h3>
-          <p>商业定位 / 营养业务落地 / 关系自我三个板块的复盘与实操。把课堂方法论用到自己的会员服务里。</p>
+          <div class="proj-badge" data-i18n="proj6.badge">实战落地</div>
+          <h3 data-i18n="proj6.title">don 哥线下课实践</h3>
+          <p data-i18n="proj6.desc">商业定位 / 营养业务落地 / 关系自我三个板块的复盘与实操。把课堂方法论用到自己的会员服务里。</p>
           <div class="proj-tags">
-            <span>商业落地</span><span>会员服务</span><span>私域</span>
+            <span data-i18n="proj6.tag1">商业落地</span><span data-i18n="proj6.tag2">会员服务</span><span data-i18n="proj6.tag3">私域</span>
           </div>
         </article>
       </div>
@@ -151,60 +152,60 @@
   <!-- SKILLS -->
   <section class="section" id="skills">
     <div class="container">
-      <p class="section-label reveal">技能</p>
-      <h2 class="section-title reveal">用得最顺手的几样工具。</h2>
+      <p class="section-label reveal" data-i18n="skills.tag">技能</p>
+      <h2 class="section-title reveal" data-i18n="skills.title">用得最顺手的几样工具。</h2>
 
       <div class="skill-groups">
         <div class="skill-group reveal">
-          <h3>思维框架</h3>
+          <h3 data-i18n="skg1.title">思维框架</h3>
           <div class="tags">
-            <span>维特根斯坦语言分析</span>
-            <span>Pearl 因果推断</span>
-            <span>阿德勒心理学</span>
-            <span>奥派经济学</span>
-            <span>反事实归因</span>
+            <span data-i18n="skg1.t1">维特根斯坦语言分析</span>
+            <span data-i18n="skg1.t2">Pearl 因果推断</span>
+            <span data-i18n="skg1.t3">阿德勒心理学</span>
+            <span data-i18n="skg1.t4">奥派经济学</span>
+            <span data-i18n="skg1.t5">反事实归因</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <h3>AI 协作工程</h3>
+          <h3 data-i18n="skg2.title">AI 协作工程</h3>
           <div class="tags">
             <span>Claude Code</span>
             <span>Codex</span>
-            <span>Skill 系统设计</span>
-            <span>Agent 工作流</span>
-            <span>Prompt 工程</span>
+            <span data-i18n="skg2.t3">Skill 系统设计</span>
+            <span data-i18n="skg2.t4">Agent 工作流</span>
+            <span data-i18n="skg2.t5">Prompt 工程</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <h3>商业与咨询</h3>
+          <h3 data-i18n="skg3.title">商业与咨询</h3>
           <div class="tags">
-            <span>商业模式诊断</span>
-            <span>概念拆解</span>
-            <span>执行力诊断</span>
-            <span>对标分析</span>
-            <span>好问题生成</span>
+            <span data-i18n="skg3.t1">商业模式诊断</span>
+            <span data-i18n="skg3.t2">概念拆解</span>
+            <span data-i18n="skg3.t3">执行力诊断</span>
+            <span data-i18n="skg3.t4">对标分析</span>
+            <span data-i18n="skg3.t5">好问题生成</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <h3>内容创作</h3>
+          <h3 data-i18n="skg4.title">内容创作</h3>
           <div class="tags">
-            <span>公众号长文</span>
-            <span>小红书标题</span>
-            <span>短视频 Hook</span>
-            <span>AI 文风识别</span>
+            <span data-i18n="skg4.t1">公众号长文</span>
+            <span data-i18n="skg4.t2">小红书标题</span>
+            <span data-i18n="skg4.t3">短视频 Hook</span>
+            <span data-i18n="skg4.t4">AI 文风识别</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <h3>健康专长</h3>
+          <h3 data-i18n="skg5.title">健康专长</h3>
           <div class="tags">
-            <span>营养学</span>
-            <span>运动机制</span>
-            <span>睡眠工程</span>
-            <span>因果建模</span>
+            <span data-i18n="skg5.t1">营养学</span>
+            <span data-i18n="skg5.t2">运动机制</span>
+            <span data-i18n="skg5.t3">睡眠工程</span>
+            <span data-i18n="skg5.t4">因果建模</span>
           </div>
         </div>
       </div>
@@ -214,40 +215,40 @@
   <!-- CREDENTIALS -->
   <section class="section section-gray" id="credentials">
     <div class="container">
-      <p class="section-label reveal">里程碑</p>
-      <h2 class="section-title reveal">走过的路。</h2>
+      <p class="section-label reveal" data-i18n="cred.tag">里程碑</p>
+      <h2 class="section-title reveal" data-i18n="cred.title">走过的路。</h2>
 
       <div class="stats">
         <div class="stat reveal">
           <div class="stat-num">228</div>
-          <div class="stat-label">Obsidian 笔记</div>
+          <div class="stat-label" data-i18n="stat1.label">Obsidian 笔记</div>
         </div>
         <div class="stat reveal" data-delay="80">
           <div class="stat-num">9</div>
-          <div class="stat-label">身体 OS 因果模型</div>
+          <div class="stat-label" data-i18n="stat2.label">身体 OS 因果模型</div>
         </div>
         <div class="stat reveal" data-delay="160">
           <div class="stat-num">2</div>
-          <div class="stat-label">已结业课程</div>
+          <div class="stat-label" data-i18n="stat3.label">已结业课程</div>
         </div>
         <div class="stat reveal" data-delay="240">
           <div class="stat-num">31<span class="stat-unit">MB</span></div>
-          <div class="stat-label">私有知识库</div>
+          <div class="stat-label" data-i18n="stat4.label">私有知识库</div>
         </div>
       </div>
 
       <div class="cred-list reveal">
         <div class="cred-item">
           <span class="cred-date">2026-05</span>
-          <span class="cred-name">Pearl《为什么》因果科学 — 结业</span>
+          <span class="cred-name" data-i18n="cred1.name">Pearl《为什么》因果科学 — 结业</span>
         </div>
         <div class="cred-item">
           <span class="cred-date">2026-05</span>
-          <span class="cred-name">维特根斯坦《逻辑哲学论》— 结业</span>
+          <span class="cred-name" data-i18n="cred2.name">维特根斯坦《逻辑哲学论》— 结业</span>
         </div>
         <div class="cred-item">
           <span class="cred-date">2026-06</span>
-          <span class="cred-name">TEM-4 英语专四 — 备考中</span>
+          <span class="cred-name" data-i18n="cred3.name">TEM-4 英语专四 — 备考中</span>
         </div>
       </div>
     </div>
@@ -256,29 +257,29 @@
   <!-- WEBSITE -->
   <section class="section section-website" id="website">
     <div class="container">
-      <p class="section-label reveal">我的网站</p>
-      <h2 class="section-title reveal">专四工作台。</h2>
-      <p class="section-sub reveal">这一块正在完善，等上线后会出现在这里。</p>
+      <p class="section-label reveal" data-i18n="website.tag">我的网站</p>
+      <h2 class="section-title reveal" data-i18n="website.title">专四工作台。</h2>
+      <p class="section-sub reveal" data-i18n="website.sub">这一块正在完善，等上线后会出现在这里。</p>
 
       <div class="website-card reveal">
         <div class="website-badge">
           <span class="dot"></span>
-          Coming Soon · 开发中
+          <span data-i18n="website.badge">Coming Soon · 开发中</span>
         </div>
-        <h3 class="website-title">
+        <h3 class="website-title" data-i18n="website.h">
           给全国备考英语专四的学生，<br>
           一个真正像样的工作台。
         </h3>
-        <p class="website-desc">
+        <p class="website-desc" data-i18n="website.desc">
           原本只是为了让自己 2026-06 通过考试做的私人工具。
           慢慢做着做着，发现需要它的人不止我一个。
         </p>
         <div class="website-features">
-          <span>真题完形闯关</span>
-          <span>语法专项卡片</span>
-          <span>听写训练</span>
-          <span>词汇错词回采</span>
-          <span>战绩面板</span>
+          <span data-i18n="website.feat1">真题完形闯关</span>
+          <span data-i18n="website.feat2">语法专项卡片</span>
+          <span data-i18n="website.feat3">听写训练</span>
+          <span data-i18n="website.feat4">词汇错词回采</span>
+          <span data-i18n="website.feat5">战绩面板</span>
         </div>
         <div class="website-mock" aria-hidden="true">
           <div class="mock-bar"><span></span><span></span><span></span></div>
@@ -298,9 +299,9 @@
   <!-- CONTACT -->
   <section class="section section-dark" id="contact">
     <div class="container narrow center">
-      <p class="section-label inv reveal">联系</p>
-      <h2 class="section-title inv reveal">想聊聊吗？</h2>
-      <p class="contact-sub reveal">
+      <p class="section-label inv reveal" data-i18n="contact.tag">联系</p>
+      <h2 class="section-title inv reveal" data-i18n="contact.title">想聊聊吗？</h2>
+      <p class="contact-sub reveal" data-i18n="contact.sub">
         商业咨询、AI 协作、健康营养、或者只是想认识一下 ——<br>
         欢迎发邮件。我会回。
       </p>
@@ -314,7 +315,7 @@
 
 <footer class="footer">
   <div class="container footer-row">
-    <p>© 2026 Korey · 用拆问题的方法过日子</p>
+    <p data-i18n="foot.c">© 2026 Korey · 用拆问题的方法过日子</p>
     <a class="footer-switch" href="dark.html">→ Try dark Liquid Glass variant</a>
   </div>
 </footer>
