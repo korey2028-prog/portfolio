@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fitness OS 案例：用 SwiftUI、HealthKit 与本地规则把健康数据转成每日最小行动。">
+  <meta name="theme-color" content="#0b0d10"><title>Fitness OS｜Korey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css?v=4">
+</head>
+<body class="case-page">
+  <header class="site-header" data-header><a class="brand" href="../index.html"><span class="brand-mark">K</span><span>Korey <small>AI 产品实践</small></span></a><nav class="nav"><a href="../index.html#work">← 全部作品</a><a href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">GitHub ↗</a></nav></header>
+  <main>
+    <section class="case-hero"><p class="eyebrow reveal">CASE 02 · iOS PRODUCT / HEALTH</p><h1 class="reveal">Fitness OS</h1><p class="case-lead reveal">不再堆更多健康图表，而是把训练、营养、睡眠和恢复信号压缩成：今天最值得做的一个动作是什么？</p><div class="case-fact-grid reveal"><div><span>角色</span><strong>产品发起人／真实用户／系统设计者</strong></div><div><span>技术</span><strong>SwiftUI／HealthKit／本地 JSON</strong></div><div><span>状态</span><strong>真机运行，未上架</strong></div></div></section>
+    <figure class="case-image phone-case reveal"><img src="../assets/fitness-os-today.png" alt="Fitness OS 今日页面"><figcaption>今日页面使用无个人指标的 QA 状态截图。健康原始数据、备份与设备信息没有进入公开仓库。</figcaption></figure>
+    <section class="case-section reveal"><p class="eyebrow">THE PROBLEM</p><h2>数据不是建议，建议也不是行动。</h2><div class="case-columns"><p>Apple Health、训练记录、饮食和主观状态各自存在，但它们不会自动回答“今天该训练、调整还是休息”。如果直接让模型每天重新建议，又会产生漂移和无法追责的问题。</p><p>因此我把产品约束为：先显示事实，再显示推断和数据可信度，最后只给一个最小行动；一次只运行一个 7 天干预，并允许结论是“证据不足”。</p></div></section>
+    <section class="case-section reveal"><p class="eyebrow">DECISION LOOP</p><h2>可解释、可回看、可回滚。</h2><div class="flow"><span>HealthKit＋手动记录</span><b>→</b><span>28 天个人基线</span><b>→</b><span>事实／推断分层</span><b>→</b><span>一个当日动作</span><b>→</b><span>7 天结果复盘</span></div></section>
+    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>一个完整的本地健康记录与决策循环。</h2><div class="deliverable-grid"><article><strong>低摩擦记录</strong><p>一句话输入先解析状态、训练与营养，预览确认后才写入；支持补录日期与编辑营养值。</p></article><article><strong>训练与营养</strong><p>重量、次数、RPE、休息计时、餐食原文、宏量与微量营养覆盖进入统一时间线。</p></article><article><strong>数据可信度</strong><p>可疑 Health 样本不会自动变成“恢复债”；界面明确显示来源、缺口和仍需补充的信息。</p></article><article><strong>数据安全</strong><p>本地 JSON、每日与迁移快照、完整导入导出、恢复前保护和事务式回滚。</p></article></div></section>
+    <section class="case-section reveal"><p class="eyebrow">PRODUCT JUDGMENT</p><h2>LLM 负责解释，规则负责守边界。</h2><div class="case-columns"><p>当前版本使用确定性规则引擎生成准备度、营养调整与周复盘。自然语言模型可以帮助解释或起草，但不会静默改写健康记录，也不会越过红旗筛查和数据缺失。</p><p>这不是医疗诊断产品，也没有把个人健康信息同步到云端。下一步不是继续堆功能，而是收集真实 7 天结果，再判断哪些规则值得版本化。</p></div></section>
+    <section class="case-section status-note reveal"><p class="eyebrow">VERIFIED STATUS</p><h2>当前真实状态</h2><ul><li>Xcode 26.6、iOS 26.5 Simulator Debug 构建通过。</li><li>核心演化逻辑测试通过；多页面、大字号与 Reduce Motion 路径完成 QA。</li><li>2026-09-04 完成 USB 覆盖安装、首次启动与旧记录完整性回读。</li><li>尚未上架 App Store，也没有真实外部用户效果数据。</li></ul></section>
+    <section class="case-next"><a href="dm-rehearsal.html"><span>下一个案例</span><strong>DM 排练系统 →</strong></a></section>
+  </main><footer><span>© <span data-year></span> Korey</span><a href="../index.html">返回作品集</a></footer><script src="../script.js?v=4"></script>
+</body></html>

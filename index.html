@@ -1,335 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Korey Self Introduction</title>
-  <meta name="description" content="Korey 的个人主页。用拆问题的方法，把模糊困扰变成具体可解决的真问题。">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Korey 的 AI 产品作品集：从用户真实问题出发，把专四备考工作台、Fitness OS 与 DM 排练系统做成能运行、能验证的产品样板。">
+  <meta name="theme-color" content="#0b0d10">
+  <title>Korey｜AI 产品作品集</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Korey 作品集首页"><span class="brand-mark">K</span><span>Korey <small>AI 产品实践</small></span></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#work">代表作品</a><a href="#method">工作方式</a><a href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">Korey.</a>
-    <ul class="nav-links">
-      <li><a href="#about" data-i18n="nav.about">关于</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">项目</a></li>
-      <li><a href="#skills" data-i18n="nav.skills">技能</a></li>
-      <li><a href="#website" data-i18n="nav.website">作品</a></li>
-      <li><a href="#contact" data-i18n="nav.contact">联系</a></li>
-      <li><a href="now.html" data-i18n="nav.now">动态</a></li>
-    </ul>
-    <button class="nav-lang" data-lang-toggle aria-label="Switch language">EN</button>
-    <a class="nav-theme" href="dark.html" aria-label="切换到深色模式" title="深色模式">
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M15 11.5A6 6 0 1 1 8.5 5a5 5 0 0 0 6.5 6.5z"/>
-      </svg>
-    </a>
-    <button class="nav-cta" data-resume data-i18n="nav.cta">简历</button>
-    <button class="nav-burger" id="navBurger" aria-label="菜单">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-    </div>
-    <div class="container">
-      <p class="hero-eyebrow reveal">Hi, I'm Korey.</p>
-      <h1 class="hero-title reveal" data-delay="100" data-i18n="hero.title">
-        反事实归因者。<br>
-        <span class="grad">把模糊困扰，</span><br>
-        变成具体可解决的真问题。
-      </h1>
-      <p class="hero-sub reveal" data-delay="200" data-i18n="hero.sub">
-        用维特根斯坦的语言分析 + Pearl 的因果推断，重新拆解一个问题；<br>
-        再让 AI 协作工程把答案变成可运行的工具。
-      </p>
-      <div class="hero-cta reveal" data-delay="300">
-        <button class="btn btn-primary" data-resume data-i18n="hero.cta.resume">
-          下载简历 <span class="btn-meta">PDF · 即将上线</span>
-        </button>
-        <a class="btn btn-ghost" href="#projects" data-i18n="hero.cta.browse">
-          浏览项目 <span class="arrow">→</span>
-        </a>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">USER-FIRST AI PRODUCT BUILDER · 2026 PORTFOLIO</p>
+          <h1>我把真实生活里的复杂问题，<span>做成能运行、能验证的 AI 产品。</span></h1>
+          <p class="hero-lead">英语专业背景，自学产品、因果推理、商业模式和 AI 协作工程。我最在意的不是“炫技”，而是从用户真实卡点出发，把模糊需求拆成界面、流程、反馈和验收标准，再用 Claude Code 与 Codex 推进到真实可用的产物。</p>
+          <div class="hero-actions"><a class="button primary" href="#work">看 3 个代表作品</a><a class="button secondary" href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">查看 GitHub</a></div>
+        </div>
+        <aside class="hero-proof reveal" aria-label="作品集摘要">
+          <p class="proof-label">WHAT I SHIP</p><div class="proof-number">03</div><p>从真实用户场景出发的产品系统</p>
+          <ul><li><span>01</span> 学习反馈系统</li><li><span>02</span> 健康归因系统</li><li><span>03</span> DM 排练系统</li></ul>
+        </aside>
       </div>
-    </div>
-    <a class="hero-scroll" href="#about" aria-label="向下滚动">
-      <span></span>
-    </a>
-  </section>
+      <div class="signal-row" aria-label="核心方法"><span>USER-FIRST</span><span>LOCAL-FIRST</span><span>DBS BUSINESS LENS</span><span>EVIDENCE-DRIVEN</span><span>PRIVACY-AWARE</span></div>
+    </section>
 
-  <!-- ABOUT -->
-  <section class="section section-about" id="about">
-    <div class="container narrow">
-      <p class="section-label reveal" data-i18n="about.tag">关于</p>
-      <h2 class="section-title reveal" data-i18n="about.title">
-        不写代码的工程师，<br>
-        不开店的咨询师。
-      </h2>
-      <div class="about-text reveal">
-        <p data-i18n="about.p1">英语专业背景，深度学习过维特根斯坦《逻辑哲学论》和 Pearl《为什么》。一边在做营养健康的因果建模 <em>（身体 OS / M1–M9）</em>，一边在用 Claude Code + Codex 双平台搭自己的 Skill 工作流。</p>
-        <p data-i18n="about.p2">做事方法很简单：先把概念拆到原子级，再问"如果换掉这一个变量会怎样"，最后让 AI 把推理变成可运行的产品。这也是为什么我把自己叫做<strong>反事实归因者</strong>。</p>
+    <section class="work" id="work">
+      <div class="section-heading reveal"><p class="eyebrow">SELECTED WORK</p><h2>3 个产品，3 种复杂问题。</h2><p>不是把项目堆在一起，而是展示同一套能力如何迁移到学习、健康和复杂剧本协作里：先理解用户现场，再搭系统，再验证结果。</p></div>
+
+      <article class="project project-tem4 reveal">
+        <div class="project-media"><img src="assets/tem4-workbench.png" alt="专四备考工作台首页，包含训练模块、学习进度和错题复盘入口" loading="lazy"><span class="media-note">真实本地工作台界面</span></div>
+        <div class="project-copy">
+          <div class="project-meta"><span>01</span><span>WEB PRODUCT · EDTECH</span></div><h3>专四备考工作台</h3>
+          <p class="project-question">如何把散落的真题、音频和错题，变成一条持续反馈的备考闭环？</p>
+          <p>从自己的备考痛点出发，搭建本地 Web 工作台：练习、计时、提交后反馈、错题回采、同类题回炉、历史成绩与 AI 评分交接都在同一条路径里。核心不是“资料更多”，而是让学生下一步该做什么变得清楚。</p>
+          <dl class="metrics"><div><dt>180</dt><dd>道 9 年语法真题</dd></div><div><dt>627</dt><dd>道扩展练习池</dd></div><div><dt>13</dt><dd>套听写训练</dd></div></dl>
+          <a class="text-link" href="work/tem4.html">查看完整案例 <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="project project-fitness reveal">
+        <div class="project-media phone-media"><img src="assets/fitness-os-today.png" alt="Fitness OS iPhone 今日页面，显示当天行动、数据可信度和记录入口" loading="lazy"><span class="media-note">iOS 26 版本界面</span></div>
+        <div class="project-copy">
+          <div class="project-meta"><span>02</span><span>iOS PRODUCT · HEALTH</span></div><h3>Fitness OS</h3>
+          <p class="project-question">健康数据很多，但今天到底应该做什么？</p>
+          <p>把 Obsidian 里的训练与营养系统做成 SwiftUI App。它读取 Apple Health 与手动记录，明确区分事实、推断和行动，只给出一个当日最小动作。对用户来说，价值不是再听一遍通用建议，而是判断这次真正卡住的主因。</p>
+          <dl class="metrics"><div><dt>28d</dt><dd>个人基线窗口</dd></div><div><dt>7d</dt><dd>单一干预周期</dd></div><div><dt>100%</dt><dd>本地数据优先</dd></div></dl>
+          <a class="text-link" href="work/fitness-os.html">查看完整案例 <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="project project-dm reveal">
+        <div class="project-media dm-media"><img src="assets/dm-os.png" alt="DM 排练系统五分钟总览界面，包含轮次与剧透等级控制" loading="lazy"><span class="media-note">合成剧本演示界面</span></div>
+        <div class="project-copy">
+          <div class="project-meta"><span>03</span><span>AI WORKFLOW · CREATIVE OPS</span></div><h3>DM 排练系统</h3>
+          <p class="project-question">200 多页剧本和碎片证据，怎样在上场前变成可执行提示？</p>
+          <p>以原件、OCR、证据层级和人物行动线为基础，把复杂剧本整理成长版演员手册、短版 Cue 表、逐幕排练卡与现场降级路径。它解决的是 DM 和演员在真实现场的信息负担，而不是做一个漂亮 PDF。</p>
+          <dl class="metrics"><div><dt>212</dt><dd>页旗舰演员手册</dd></div><div><dt>358</dt><dd>个可导航书签</dd></div><div><dt>212/212</dt><dd>页面渲染验收</dd></div></dl>
+          <a class="text-link" href="work/dm-rehearsal.html">查看完整案例 <span>→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="method" id="method">
+      <div class="section-heading reveal"><p class="eyebrow">HOW I WORK</p><h2>我的优势不是“会用 AI”，而是能把 AI 放进用户问题和商业闭环里。</h2></div>
+      <div class="method-grid">
+        <article class="reveal"><span>01</span><h3>重构问题</h3><p>先区分用户说出的方案与真正想抵达的状态，明确成功信号、约束和不可接受的代价。</p></article>
+        <article class="reveal"><span>02</span><h3>商业判断</h3><p>吸收 Don’t be silent 的线下课方法，先看用户、流量、付费承接和第一单是否成立，再决定要不要继续做大。</p></article>
+        <article class="reveal"><span>03</span><h3>设计系统</h3><p>把任务拆成数据、界面、判断、反馈与恢复路径，让产品能长期积累，而不只是一次性生成。</p></article>
+        <article class="reveal"><span>04</span><h3>协作执行</h3><p>用 Claude Code、Codex、Skill 与自动化分工推进；我掌握方向、边界与验收，AI 放大执行力。</p></article>
+        <article class="reveal"><span>05</span><h3>证据验收</h3><p>区分“写出来”“跑通过”“真机可用”和“真实用户验证”，不把局部成功包装成产品完成。</p></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section class="section section-gray" id="projects">
-    <div class="container">
-      <p class="section-label reveal" data-i18n="projects.tag">项目</p>
-      <h2 class="section-title reveal" data-i18n="projects.title">我在做的事。</h2>
-      <p class="section-sub reveal" data-i18n="projects.sub">六个并行的项目，每一个都在回答一个具体的问题。</p>
+    <section class="closing">
+      <div class="closing-copy reveal"><p class="eyebrow">LOOKING FOR</p><h2>AI 产品、Agent 工作流、用户研究与内容产品方向。</h2><p>我想加入重视真实问题、快速试验和长期产品判断的 AI 团队。欢迎从这 3 个案例开始了解我。</p></div>
+      <a class="button primary reveal" href="mailto:korey2028@gmail.com">发邮件联系我</a>
+    </section>
+  </main>
 
-      <div class="proj-grid">
-        <article class="proj-card reveal">
-          <div class="proj-badge proj-badge-live" data-i18n="proj1.badge">开发中</div>
-          <h3 data-i18n="proj1.title">专四工作台</h3>
-          <p data-i18n="proj1.desc">给全国备考英语专四的学生，一个真正像样的复习工作台。原本是为自己 2026-06 考试做的私人工具。</p>
-          <div class="proj-tags">
-            <span data-i18n="proj1.tag1">真题闯关</span><span data-i18n="proj1.tag2">语法卡片</span><span data-i18n="proj1.tag3">错词回采</span>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-badge" data-i18n="proj2.badge">持续迭代</div>
-          <h3 data-i18n="proj2.title">身体 OS</h3>
-          <p data-i18n="proj2.desc">自己搭的健康因果模型系统：9 个机制模型 + 3 个操作协议，用 Pearl 中介分析法处理"睡了很久还是没精神"这种问题。</p>
-          <div class="proj-tags">
-            <span data-i18n="proj2.tag1">因果建模</span><span data-i18n="proj2.tag2">营养</span><span data-i18n="proj2.tag3">睡眠</span>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-badge" data-i18n="proj3.badge">日常运营</div>
-          <h3 data-i18n="proj3.title">AI 协作工作流</h3>
-          <p data-i18n="proj3.desc">Claude Code + Codex 双平台 Skill 系统。手机 Gemini 捕获 / 桌面 Claude 深加工的节奏化路由。</p>
-          <div class="proj-tags">
-            <span data-i18n="proj3.tag1">Skill 设计</span><span data-i18n="proj3.tag2">Agent 工作流</span><span data-i18n="proj3.tag3">Prompt 工程</span>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-badge" data-i18n="proj4.badge">长期</div>
-          <h3 data-i18n="proj4.title">公众号长文</h3>
-          <p data-i18n="proj4.desc">把 vault 里的因果模型和方法论翻译成大众读得懂的长文。已发表《为什么睡了很久还是没精神》等深度内容。</p>
-          <div class="proj-tags">
-            <span data-i18n="proj4.tag1">内容创作</span><span data-i18n="proj4.tag2">科普写作</span><span data-i18n="proj4.tag3">方法论</span>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-badge" data-i18n="proj5.badge">228 篇</div>
-          <h3 data-i18n="proj5.title">Obsidian 知识库</h3>
-          <p data-i18n="proj5.desc">三端同步的私人知识系统，按"自我 / 商业 / 关系 / 元 / 外部思想"分类，配 Dataview 实现笔记关系网络。</p>
-          <div class="proj-tags">
-            <span data-i18n="proj5.tag1">知识管理</span><span>Dataview</span><span data-i18n="proj5.tag3">三端同步</span>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-badge" data-i18n="proj6.badge">实战落地</div>
-          <h3 data-i18n="proj6.title">don 哥线下课实践</h3>
-          <p data-i18n="proj6.desc">商业定位 / 营养业务落地 / 关系自我三个板块的复盘与实操。把课堂方法论用到自己的会员服务里。</p>
-          <div class="proj-tags">
-            <span data-i18n="proj6.tag1">商业落地</span><span data-i18n="proj6.tag2">会员服务</span><span data-i18n="proj6.tag3">私域</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="container">
-      <p class="section-label reveal" data-i18n="skills.tag">技能</p>
-      <h2 class="section-title reveal" data-i18n="skills.title">用得最顺手的几样工具。</h2>
-
-      <div class="skill-groups">
-        <div class="skill-group reveal">
-          <h3 data-i18n="skg1.title">思维框架</h3>
-          <div class="tags">
-            <span data-i18n="skg1.t1">维特根斯坦语言分析</span>
-            <span data-i18n="skg1.t2">Pearl 因果推断</span>
-            <span data-i18n="skg1.t3">阿德勒心理学</span>
-            <span data-i18n="skg1.t4">奥派经济学</span>
-            <span data-i18n="skg1.t5">反事实归因</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <h3 data-i18n="skg2.title">AI 协作工程</h3>
-          <div class="tags">
-            <span>Claude Code</span>
-            <span>Codex</span>
-            <span data-i18n="skg2.t3">Skill 系统设计</span>
-            <span data-i18n="skg2.t4">Agent 工作流</span>
-            <span data-i18n="skg2.t5">Prompt 工程</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <h3 data-i18n="skg3.title">商业与咨询</h3>
-          <div class="tags">
-            <span data-i18n="skg3.t1">商业模式诊断</span>
-            <span data-i18n="skg3.t2">概念拆解</span>
-            <span data-i18n="skg3.t3">执行力诊断</span>
-            <span data-i18n="skg3.t4">对标分析</span>
-            <span data-i18n="skg3.t5">好问题生成</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <h3 data-i18n="skg4.title">内容创作</h3>
-          <div class="tags">
-            <span data-i18n="skg4.t1">公众号长文</span>
-            <span data-i18n="skg4.t2">小红书标题</span>
-            <span data-i18n="skg4.t3">短视频 Hook</span>
-            <span data-i18n="skg4.t4">AI 文风识别</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <h3 data-i18n="skg5.title">健康专长</h3>
-          <div class="tags">
-            <span data-i18n="skg5.t1">营养学</span>
-            <span data-i18n="skg5.t2">运动机制</span>
-            <span data-i18n="skg5.t3">睡眠工程</span>
-            <span data-i18n="skg5.t4">因果建模</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CREDENTIALS -->
-  <section class="section section-gray" id="credentials">
-    <div class="container">
-      <p class="section-label reveal" data-i18n="cred.tag">里程碑</p>
-      <h2 class="section-title reveal" data-i18n="cred.title">走过的路。</h2>
-
-      <div class="stats">
-        <div class="stat reveal">
-          <div class="stat-num">228</div>
-          <div class="stat-label" data-i18n="stat1.label">Obsidian 笔记</div>
-        </div>
-        <div class="stat reveal" data-delay="80">
-          <div class="stat-num">9</div>
-          <div class="stat-label" data-i18n="stat2.label">身体 OS 因果模型</div>
-        </div>
-        <div class="stat reveal" data-delay="160">
-          <div class="stat-num">2</div>
-          <div class="stat-label" data-i18n="stat3.label">已结业课程</div>
-        </div>
-        <div class="stat reveal" data-delay="240">
-          <div class="stat-num">31<span class="stat-unit">MB</span></div>
-          <div class="stat-label" data-i18n="stat4.label">私有知识库</div>
-        </div>
-      </div>
-
-      <div class="cred-list reveal">
-        <div class="cred-item">
-          <span class="cred-date">2026-05</span>
-          <span class="cred-name" data-i18n="cred1.name">Pearl《为什么》因果科学 — 结业</span>
-        </div>
-        <div class="cred-item">
-          <span class="cred-date">2026-05</span>
-          <span class="cred-name" data-i18n="cred2.name">维特根斯坦《逻辑哲学论》— 结业</span>
-        </div>
-        <div class="cred-item">
-          <span class="cred-date">2026-06</span>
-          <span class="cred-name" data-i18n="cred3.name">TEM-4 英语专四 — 备考中</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WEBSITE -->
-  <section class="section section-website" id="website">
-    <div class="container">
-      <p class="section-label reveal" data-i18n="website.tag">我的网站</p>
-      <h2 class="section-title reveal" data-i18n="website.title">专四工作台。</h2>
-      <p class="section-sub reveal" data-i18n="website.sub">这一块正在完善，等上线后会出现在这里。</p>
-
-      <div class="website-card reveal">
-        <div class="website-badge">
-          <span class="dot"></span>
-          <span data-i18n="website.badge">Coming Soon · 开发中</span>
-        </div>
-        <h3 class="website-title" data-i18n="website.h">
-          给全国备考英语专四的学生，<br>
-          一个真正像样的工作台。
-        </h3>
-        <p class="website-desc" data-i18n="website.desc">
-          原本只是为了让自己 2026-06 通过考试做的私人工具。
-          慢慢做着做着，发现需要它的人不止我一个。
-        </p>
-        <div class="website-features">
-          <span data-i18n="website.feat1">真题完形闯关</span>
-          <span data-i18n="website.feat2">语法专项卡片</span>
-          <span data-i18n="website.feat3">听写训练</span>
-          <span data-i18n="website.feat4">词汇错词回采</span>
-          <span data-i18n="website.feat5">战绩面板</span>
-        </div>
-
-        <form class="notify" data-notify>
-          <input type="email" name="email" required spellcheck="false"
-                 placeholder="your@email.com" data-i18n-attr="placeholder" data-i18n-key="notify.placeholder">
-          <button type="submit" data-i18n="notify.button">通知我上线 →</button>
-        </form>
-        <p class="notify-hint" data-i18n="notify.hint">上线时给你发邮件。不订阅、不打扰、不卖给任何人。</p>
-        <div class="website-mock" aria-hidden="true">
-          <div class="mock-bar"><span></span><span></span><span></span></div>
-          <div class="mock-body">
-            <div class="mock-line w-80"></div>
-            <div class="mock-line w-60"></div>
-            <div class="mock-line w-40"></div>
-            <div class="mock-grid">
-              <div></div><div></div><div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section-dark" id="contact">
-    <div class="container narrow center">
-      <p class="section-label inv reveal" data-i18n="contact.tag">联系</p>
-      <h2 class="section-title inv reveal" data-i18n="contact.title">想聊聊吗？</h2>
-      <p class="contact-sub reveal" data-i18n="contact.sub">
-        商业咨询、AI 协作、健康营养、或者只是想认识一下 ——<br>
-        欢迎发邮件。我会回。
-      </p>
-      <a class="btn btn-primary-inv reveal" data-delay="200" href="mailto:korey2028@gmail.com">
-        korey2028@gmail.com
-      </a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container footer-row">
-    <p data-i18n="foot.c">© 2026 Korey · 用拆问题的方法过日子</p>
-    <a class="footer-switch" href="dark.html">→ Try dark Liquid Glass variant</a>
-  </div>
-</footer>
-
-<div class="toast" id="toast" role="status" aria-live="polite">简历即将上线</div>
-
-<script src="script.js"></script>
+  <footer><span>© <span data-year></span> Korey</span><span>Built from real projects · No private data published</span></footer>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

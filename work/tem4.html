@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="专四备考工作台案例：从分散资料到练习、反馈、错题回炉与 AI 评分闭环。">
+  <meta name="theme-color" content="#0b0d10"><title>专四备考工作台｜Korey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=4">
+</head>
+<body class="case-page">
+  <header class="site-header" data-header><a class="brand" href="../index.html"><span class="brand-mark">K</span><span>Korey <small>AI 产品实践</small></span></a><nav class="nav"><a href="../index.html#work">← 全部作品</a><a href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">GitHub ↗</a></nav></header>
+  <main>
+    <section class="case-hero">
+      <p class="eyebrow reveal">CASE 01 · WEB PRODUCT / EDTECH</p>
+      <h1 class="reveal">专四备考工作台</h1>
+      <p class="case-lead reveal">把“我该刷什么题”重构成一个可持续反馈的问题：每次作答都留下薄弱点、复盘路径和下一次训练入口。</p>
+      <div class="case-fact-grid reveal"><div><span>角色</span><strong>产品发起人／真实用户／AI 协作构建者</strong></div><div><span>形态</span><strong>本地 Web 工作台</strong></div><div><span>状态</span><strong>本地可运行，未公开发布</strong></div></div>
+    </section>
+
+    <figure class="case-image reveal"><img src="../assets/tem4-workbench.png" alt="专四备考工作台完整首页"><figcaption>真实工作台首页。公开展示仅使用导航与模块界面，不包含购买资料、真题正文或个人学习记录。</figcaption></figure>
+
+    <section class="case-section reveal"><p class="eyebrow">THE PROBLEM</p><h2>资料并不稀缺，反馈闭环才稀缺。</h2><div class="case-columns"><p>备考资料散落在 PDF、音频与错题笔记里。普通练习页经常提前暴露答案，做完一题也不会告诉用户薄弱点是什么、下一题应该练什么。</p><p>我把产品目标定为：提交前不剧透，提交后把答案、翻译、具体考点和同类题入口放回决策位置；所有进度自动保存，允许跨年份回看。</p></div></section>
+
+    <section class="case-section reveal"><p class="eyebrow">SYSTEM LOOP</p><h2>从原始材料到个性化复盘。</h2><div class="flow" aria-label="专四工作台流程"><span>OCR／结构化</span><b>→</b><span>模板化练习</span><b>→</b><span>提交后反馈</span><b>→</b><span>错题回采</span><b>→</b><span>同类题回炉</span></div></section>
+
+    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>不是单页 Demo，而是一组互相连通的训练模块。</h2><div class="deliverable-grid"><article><strong>语法与词汇</strong><p>9 个年份、180 道题；另有 627 道扩展池与按薄弱点匹配的 5 题快练。</p></article><article><strong>完形与阅读</strong><p>9 套完形；8 个年份阅读完整，2023 年仍是占位页，因此没有写成“全覆盖”。</p></article><article><strong>听写与写作</strong><p>13 套听写支持整段作答与提交后意群复盘；9 套写作支持草稿、计时与 AI 评分回填。</p></article><article><strong>持续记忆</strong><p>错题自动入库、连对 2 次标记掌握；localStorage、OPFS 与 JSON 导入导出共同兜底。</p></article></div></section>
+
+    <section class="case-section reveal"><p class="eyebrow">AI COLLABORATION</p><h2>AI 被放在可审查的环节里。</h2><div class="case-columns"><p>Python 脚本负责批量构建，OCR 负责初步提取，Claude Code／Codex 协助实现与回归。阅读简答和写作不直接调用黑盒 API，而是生成评分 Prompt，用户在模型端运行后把 JSON 结果回填。</p><p>这条路径牺牲了一点顺滑度，但换来更低成本、无密钥暴露和可检查的评分输入。评分审计另行记录，防止字数或局部提交污染总成绩。</p></div></section>
+
+    <section class="case-section status-note reveal"><p class="eyebrow">VERIFIED STATUS</p><h2>当前真实状态</h2><ul><li>本地服务与首页、语法、阅读、听写、错题本、写作页面可访问。</li><li>核心模块做过浏览器烟测与评分机制审计。</li><li>2023 年阅读仍是占位骨架；2025 年完形有 4 个答案键待人工核对。</li><li>没有公开真题、音频、答案解析、作文或个人成绩。</li></ul></section>
+
+    <section class="case-next"><a href="fitness-os.html"><span>下一个案例</span><strong>Fitness OS →</strong></a></section>
+  </main>
+  <footer><span>© <span data-year></span> Korey</span><a href="../index.html">返回作品集</a></footer><script src="../script.js?v=4"></script>
+</body></html>
