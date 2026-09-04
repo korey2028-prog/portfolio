@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="专四备考工作台脱敏交互样板：体验提交后反馈、结构复盘与同类题回炉。">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="canonical" href="https://korey2028-prog.github.io/portfolio/demo/tem4-loop.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>专四反馈闭环交互样板｜Korey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=6">
+  <link rel="stylesheet" href="tem4-loop.css?v=1">
+</head>
+<body class="demo-page">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="../index.html"><span class="brand-mark">K</span><span>Korey <small>AI 产品实践</small></span></a>
+    <nav class="nav" aria-label="演示导航"><a href="../work/tem4.html">专四案例</a><a href="../resume.html">简历版</a><a href="../index.html">作品集首页</a></nav>
+  </header>
+
+  <main id="main" class="demo-main">
+    <section class="demo-intro">
+      <div>
+        <p class="eyebrow">PUBLIC INTERACTIVE SAMPLE · 60 SEC</p>
+        <h1>亲手走一遍<br><span>学习反馈闭环。</span></h1>
+        <p>选答案时不剧透；提交后才显示结构线索、错因和下一道同类题。全部为脱敏的“工作台考点迁移”题，不使用公开真题。</p>
+      </div>
+      <div class="demo-loop" aria-label="本次演示流程"><span>作答</span><b>→</b><span>反馈</span><b>→</b><span>复盘</span><b>→</b><span>回炉</span></div>
+    </section>
+
+    <section class="demo-workbench" aria-labelledby="demo-title">
+      <div class="demo-toolbar">
+        <div><p class="demo-kicker">工作台考点迁移</p><h2 id="demo-title">虚拟语气 · 结构恢复</h2></div>
+        <div class="demo-progress" aria-live="polite"><span id="progress-label">第 1／2 题</span><div class="demo-progress-track"><i id="progress-bar"></i></div></div>
+      </div>
+
+      <div class="demo-grid">
+        <div class="quiz-panel">
+          <form id="quiz-form">
+            <fieldset>
+              <legend id="question-text">Had the backup system failed, the team ___ the entire dataset.</legend>
+              <div class="answer-list" id="answer-list">
+                <label><input type="radio" name="answer" value="A"><span><b>A</b> loses</span></label>
+                <label><input type="radio" name="answer" value="B"><span><b>B</b> had lost</span></label>
+                <label><input type="radio" name="answer" value="C"><span><b>C</b> would lose</span></label>
+                <label><input type="radio" name="answer" value="D"><span><b>D</b> would have lost</span></label>
+              </div>
+            </fieldset>
+            <p class="answer-hint" id="answer-hint">先作答。答案和解析将在提交后出现。</p>
+            <button class="button primary quiz-submit" id="submit-answer" type="submit" disabled>提交答案</button>
+          </form>
+
+          <section class="quiz-feedback" id="quiz-feedback" aria-live="polite" hidden>
+            <p class="feedback-status" id="feedback-status"></p>
+            <h3 id="feedback-title"></h3>
+            <p id="feedback-copy"></p>
+            <div class="structure-signal"><span>可复用信号</span><strong id="feedback-signal"></strong></div>
+            <button class="button primary" id="next-question" type="button">进入同类题回炉</button>
+          </section>
+        </div>
+
+        <aside class="demo-trace" aria-label="系统如何处理这次作答">
+          <p class="demo-kicker">SYSTEM TRACE</p>
+          <h3>系统不是只弹“对／错”。</h3>
+          <ol>
+            <li class="active" data-trace-step="1"><span>01</span><div><strong>等待作答</strong><p>提交前隐藏答案与考点。</p></div></li>
+            <li data-trace-step="2"><span>02</span><div><strong>结构诊断</strong><p>根据决定性语法信号解释判断。</p></div></li>
+            <li data-trace-step="3"><span>03</span><div><strong>同类路由</strong><p>把薄弱结构送进下一道迁移题。</p></div></li>
+          </ol>
+          <p class="trace-note">判定层使用确定性答案；解释和推荐层保持可检查，不用“AI 说了”代替依据。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="demo-disclosure">
+      <p><strong>公开边界：</strong>本演示只复现产品机制。题目依据私有工作台中的虚拟语气／倒装结构做考点迁移，不复刻真题，不读取访问者数据，也不保存作答。</p>
+      <a class="text-link" href="../work/tem4.html">查看完整专四案例 <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><span>© <span data-year></span> Korey</span><span>Privacy-safe interactive sample</span></footer>
+  <script src="../script.js?v=6"></script>
+  <script src="tem4-loop.js?v=1"></script>
+</body>
+</html>
