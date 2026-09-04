@@ -23,10 +23,13 @@
 
 ```text
 index.html               求职作品集首页
+resume.html              面向招聘者的 AI 产品简历速读页
 work/tem4.html           专四备考工作台案例
 work/fitness-os.html     Fitness OS 案例
 work/dm-rehearsal.html   DM 排练系统案例
-assets/                  脱敏后的公开界面素材
+assets/                  脱敏后的公开界面素材与精选预览图
 ```
+
+投递时可优先发送 [AI 产品简历版](https://korey2028-prog.github.io/portfolio/resume.html)，需要详细了解时再进入 3 个完整案例页。DM 手册公开页展示交付结构与验收证据，不公开商业剧本和完整手册。
 
 网站使用原生 HTML、CSS 与 JavaScript 构建，由 GitHub Pages 托管。
