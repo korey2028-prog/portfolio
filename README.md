@@ -25,6 +25,7 @@
 index.html               求职作品集首页
 resume.html              面向招聘者的 AI 产品简历速读页
 demo/tem4-loop.html      专四反馈闭环脱敏交互样板
+demo/fitness-os.html     Fitness OS 合成数据决策交互样板
 work/tem4.html           专四备考工作台案例
 work/fitness-os.html     Fitness OS 案例
 work/dm-rehearsal.html   DM 排练系统案例
