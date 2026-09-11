@@ -1,5 +1,9 @@
 # Korey — AI Product Portfolio
 
+**产品入口：** [Fitness OS Demo →](https://korey2028-prog.github.io/portfolio/demo/fitness-os.html) · [专四备考工作台 Demo →](https://korey2028-prog.github.io/portfolio/demo/tem4-loop.html) · [Portfolio / 完整案例 →](https://korey2028-prog.github.io/portfolio/)
+
+> **招聘导向：** 面向 AI 产品与相关岗位，重点展示 AI 产品设计、可点击交互原型，以及本地优先（Local-first）的工作流。
+
 [在线作品集](https://korey2028-prog.github.io/portfolio/) · [GitHub Profile](https://github.com/korey2028-prog)
 
 这是一个面向 AI 产品、Agent 工作流、用户研究与内容产品岗位的公开作品集。它集中展示 3 个从真实问题出发、已经形成界面或交付物的代表项目：
