@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitness OS｜今天，做一个有依据的决定</title>
+  <meta name="description" content="亲手体验 Fitness OS：切换合成状态、调整睡眠与疲劳，查看建议依据，记录行动并复盘。">
+  <meta name="theme-color" content="#111713">
+  <link rel="canonical" href="https://korey2028-prog.github.io/portfolio/demo/fitness-os.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fitness-os.css?v=1">
+  <script type="module" src="fitness-os.js?v=1"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到工作台</a>
+  <header class="topbar"><a class="wordmark" href="../index.html">K<span> / FITNESS OS</span></a><nav aria-label="作品导航"><a href="../work/fitness-os.html">产品案例 ↗</a><a href="../resume.html">简历</a></nav></header>
+  <main id="main">
+    <div class="intro"><div><p class="eyebrow">INTERACTIVE PRODUCT STUDY / 02</p><h1>今天，做一个有依据的决定。</h1></div><p class="intro-note">合成数据体验 · 无需登录<br>不连接 Apple Health，不保存个人信息</p></div>
+    <div class="scenario-bar" role="group" aria-label="选择演示场景"><span>试一个场景</span><button type="button" data-scene="ready" aria-pressed="true">01 恢复良好</button><button type="button" data-scene="tired" aria-pressed="false">02 恢复不足</button><button type="button" data-scene="pain" aria-pressed="false">03 关节痛信号</button><button type="button" data-scene="missing" aria-pressed="false">04 尚未记录</button></div>
+    <a class="mobile-result" href="#decision">查看当前建议：<span id="mobile-status">等待信号</span> ↓</a>
+    <div class="workspace">
+      <section class="inputs" aria-labelledby="input-title"><div class="section-head"><span class="eyebrow">01 / INPUT</span><h2 id="input-title">先看今天的信号</h2><p>调整任一数值，右侧建议会随之更新。</p></div>
+        <form id="signals">
+          <label class="check"><input id="has-daily" type="checkbox" checked> 已完成今日状态记录</label>
+          <fieldset id="daily-fields"><legend class="sr-only">今日状态</legend>
+            <label class="range-label" for="sleep">昨晚睡眠 <output id="sleep-value" for="sleep">7.5 小时</output></label><input id="sleep" type="range" min="3" max="10" step="0.5" value="7.5">
+            <label class="range-label" for="fatigue">主观疲劳 <output id="fatigue-value" for="fatigue">3 / 10</output></label><input id="fatigue" type="range" min="1" max="10" step="1" value="3"><p class="hint">分数越高，疲劳越明显。</p>
+            <label class="range-label" for="soreness">肌肉酸痛 <output id="soreness-value" for="soreness">2 / 10</output></label><input id="soreness" type="range" min="0" max="10" step="1" value="2">
+            <label class="range-label" for="readiness">自评准备度 <output id="readiness-value" for="readiness">8 / 10</output></label><input id="readiness" type="range" min="1" max="10" step="1" value="8"><p class="hint">这是主观输入，不是系统计算的健康分。</p>
+            <details id="more-inputs"><summary>压力与最近训练</summary><label class="range-label" for="stress">压力 <output id="stress-value" for="stress">3 / 10</output></label><input id="stress" type="range" min="0" max="10" value="3"><label class="range-label" for="pain">关节痛 <output id="pain-value" for="pain">0 / 10</output></label><input id="pain" type="range" min="0" max="10" value="0"><label class="range-label" for="rpe">最近训练 RPE <output id="rpe-value" for="rpe">7 / 10</output></label><input id="rpe" type="range" min="1" max="10" value="7"><p class="hint">RPE 表示主观训练强度，10 表示极限。</p></details>
+          </fieldset>
+        </form>
+        <noscript><p>交互体验需要启用 JavaScript。你也可以直接阅读<a href="../work/fitness-os.html">产品案例</a>。</p></noscript>
+      </section>
+      <div class="decision-column">
+        <section class="decision" id="decision" data-level="missing" aria-labelledby="decision-title"><div class="decision-top"><span class="eyebrow">02 / ONE ACTION</span><span id="status" class="badge">等待信号</span></div><h2 id="decision-title">记录状态，获得今天的行动。</h2><p id="action">用左侧场景开始体验。</p><button type="button" class="primary" id="record" disabled>记录已执行（演示） <span>↗</span></button><p id="record-note" class="subtle">所有数值均为合成示例，不构成个体训练或医疗建议。</p></section>
+        <section class="reasoning" aria-labelledby="why-title"><div class="reason-head"><h2 id="why-title">为什么这样建议？</h2><span>事实 → 规则 → 行动</span></div><dl id="evidence"></dl><div class="explanation"><span class="eyebrow">判断依据</span><p id="reason">等待输入。</p><p id="pain-note" hidden>疼痛安全提示：这条规则不是训练许可。避免诱发疼痛的动作；明显、持续或加重的关节痛应寻求专业评估。</p></div><details><summary>查看这个样板的范围</summary><p>本页移植 App 的每日训练状态规则：任一红色信号优先；否则至少 2 个黄色信号触发调整。未做今日记录时返回“证据不足”。输入均假定已人工确认；Web 样板额外拒绝缺失或超出控件范围的输入。</p><p>原生 App 另外支持 HealthKit 数据质量检查、28 天基线、营养记录和 7 天干预。此页没有接入这些模块，也没有调用语言模型。疼痛提示与模拟反馈是公开体验层的说明，不代表原生 App 已更新。</p></details></section>
+        <section class="review" id="review" hidden aria-labelledby="review-title"><p class="eyebrow">03 / FOLLOW THROUGH</p><h2 id="review-title" tabindex="-1">行动已记下，再看执行反馈。</h2><p id="recorded-action"></p><label for="outcome">模拟一次执行后的主观反馈</label><select id="outcome"><option value="">请选择反馈</option><option value="better">感觉更好</option><option value="same">没有明显变化</option><option value="worse">感觉更差</option></select><p id="review-result" role="status">一次反馈不能证明效果，真实产品需要持续观察。</p></section>
+      </div>
+    </div>
+    <p id="update-status" class="sr-only" role="status" aria-live="polite"></p>
+    <footer><p>由 Korey 设计 · 基于 Fitness OS 原生产品规则的 Web 样板</p><div><a href="../work/fitness-os.html">了解产品取舍 →</a><a href="../index.html#work">查看全部 3 个产品 →</a></div></footer>
+  </main>
+</body>
+</html>
