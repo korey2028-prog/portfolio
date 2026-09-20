@@ -31,6 +31,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#capabilities">What I ship</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#notes">Notes</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -80,10 +81,10 @@
           <span>Selected work</span>
           <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <button class="btn btn-quiet" data-resume>
+        <a class="btn btn-quiet" href="resume.html">
           <span>Résumé</span>
-          <em class="btn-meta" data-i18n="hero.cta.resume.meta">PDF · 即将上线</em>
-        </button>
+          <em class="btn-meta" data-i18n="hero.cta.resume.meta">AI 产品简历版</em>
+        </a>
       </div>
     </div>
 
@@ -123,6 +124,44 @@
           <div class="stat-num">06·2026</div>
           <div class="stat-lbl" data-i18n="about.stat4.label">TEM-4 备考中</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="section section-capabilities" id="capabilities">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag reveal">What I ship</p>
+        <h2 class="section-h reveal" data-delay="80" data-i18n="capabilities.h">不只会做 Demo，<br>我把问题推进到能交付的形态。</h2>
+      </div>
+
+      <div class="capability-grid">
+        <article class="capability-card reveal">
+          <span class="capability-index">01 · FRAME</span>
+          <h3 data-i18n="capabilities.card1.title">把模糊需求变成产品判断</h3>
+          <p data-i18n="capabilities.card1.desc">从用户真正卡住的现场开始，拆出任务、约束、成功信号和不可接受的代价，再决定该做工具、流程，还是先做一次验证。</p>
+          <ul class="capability-list"><li>用户问题重构</li><li>场景与信息结构</li><li>商业假设拆解</li></ul>
+        </article>
+        <article class="capability-card capability-card-accent reveal" data-delay="120">
+          <span class="capability-index">02 · BUILD</span>
+          <h3 data-i18n="capabilities.card2.title">把 AI 放进可复用的工作流</h3>
+          <p data-i18n="capabilities.card2.desc">用 Claude Code、Codex、Skills 和本地工具，把提取、判断、生成、反馈与恢复路径组织成可调用的产品系统。</p>
+          <ul class="capability-list"><li>Agent workflow</li><li>本地优先产品</li><li>复杂内容结构化</li></ul>
+        </article>
+        <article class="capability-card reveal" data-delay="240">
+          <span class="capability-index">03 · PROVE</span>
+          <h3 data-i18n="capabilities.card3.title">用证据说清楚做到哪一步</h3>
+          <p data-i18n="capabilities.card3.desc">明确区分“写出来、跑通过、真机可用、公开发布、真实用户验证”，让下一步行动和风险都能被复盘。</p>
+          <ul class="capability-list"><li>验收标准</li><li>状态与边界</li><li>隐私安全发布</li></ul>
+        </article>
+      </div>
+
+      <div class="delivery-strip reveal" data-delay="320">
+        <span class="delivery-label">CURRENT EXPERIMENT</span>
+        <strong>单页个人主页 / 活动落地页</strong>
+        <span class="delivery-detail">面向独立创作者、教练、摄影师和小型活动主理人 · 公开验证阶段</span>
+        <a href="mailto:korey2028@gmail.com?subject=个人主页或活动页咨询" aria-label="咨询个人主页或活动页">聊聊 →</a>
       </div>
     </div>
   </section>
@@ -317,6 +356,18 @@
     </div>
   </section>
 
+  <!-- FIT -->
+  <section class="section section-fit" id="fit">
+    <div class="container container-narrow">
+      <p class="section-tag reveal">Looking for</p>
+      <h2 class="section-h reveal" data-delay="80" data-i18n="fit.h">我正在寻找能把真实问题做深的合作。</h2>
+      <div class="fit-copy reveal" data-delay="160">
+        <p data-i18n="fit.p">AI 产品、Agent 工作流、用户研究与内容产品方向。适合从一个具体用户现场开始，快速做出可用版本，再用真实反馈决定是否继续投入。</p>
+        <div class="fit-chips"><span>AI Product</span><span>FDE / Agent Workflow</span><span>User Research</span><span>Content Product</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- NOTES -->
   <section class="section section-notes" id="notes">
     <div class="container">
@@ -373,8 +424,8 @@
         把问题说清楚就好。
       </h2>
       <p class="contact-lede reveal" data-delay="200" data-i18n="contact.lede">
-        商业咨询、AI 协作、健康营养，<br>
-        或者只是想认识一下 —— 都欢迎邮件。
+        AI 产品、Agent 工作流、个人主页或活动页，<br>
+        也可以只是从一个具体问题开始聊。
       </p>
 
       <a class="contact-mail reveal" data-delay="320" href="mailto:korey2028@gmail.com">

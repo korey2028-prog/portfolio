@@ -27,10 +27,16 @@
 
 ```text
 index.html               求职作品集首页
+dark.html                深色 Liquid Glass 个人介绍页与交付能力索引
+resume.html              面向招聘者的 AI 产品简历速读页
 work/tem4.html           专四备考工作台案例
 work/fitness-os.html     Fitness OS 案例
 work/dm-rehearsal.html   DM 排练系统案例
-assets/                  脱敏后的公开界面素材
+assets/                  脱敏后的公开界面素材与精选预览图
 ```
+
+建议投递简历时优先发送 [AI 产品简历版](resume.html)，需要详细了解时再进入 3 个完整案例页。DM 手册的公开页展示交付结构与验收证据，不公开商业剧本和完整手册。
+
+深色个人页补充了问题重构、Agent 工作流、证据验收和当前个人主页／活动页验证方向；“公开验证阶段”不代表已有付费客户或已验证获客渠道。
 
 网站使用原生 HTML、CSS 与 JavaScript 构建，由 GitHub Pages 托管。
