@@ -397,12 +397,6 @@ main, footer, nav { position: relative; z-index: 1; }
   font-size: 14px;
   font-weight: 600;
 }
-.social-proof-head p {
-  margin: 0;
-  color: var(--ink-3);
-  font-size: 12px;
-  line-height: 1.65;
-}
 .social-metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -444,12 +438,6 @@ main, footer, nav { position: relative; z-index: 1; }
   align-items: center;
 }
 .social-copy { max-width: 620px; }
-.social-copy > p:not(.section-tag):not(.evidence-note) {
-  margin: 28px 0 0;
-  color: var(--ink-3);
-  font-size: 17px;
-  line-height: 1.75;
-}
 .social-evidence-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -473,12 +461,6 @@ main, footer, nav { position: relative; z-index: 1; }
   margin-top: 5px;
   color: var(--ink-4);
   font-size: 11px;
-}
-.social-copy .evidence-note {
-  margin: 18px 0 0;
-  color: var(--ink-4);
-  font-size: 11px;
-  line-height: 1.65;
 }
 .social-phone {
   margin: 0;
