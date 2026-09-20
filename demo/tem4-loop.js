@@ -7,7 +7,7 @@
       options:{A:'loses',B:'had lost',C:'would lose',D:'would have lost'},
       answer:'D',
       correctTitle:'你抓住了倒装条件句。',
-      wrongTitle:'关键不是 Had 本身，而是它省略了 if。',
+  wrongTitle:'Had 表达了假设条件，句子里还需要补出 if。',
       explanation:'“Had the backup system failed”还原后是“If the backup system had failed”。它描述与过去事实相反的条件，结果使用 would have + 过去分词。',
       signal:'Had + 主语 + 过去分词 = If + 主语 + had done；过去结果用 would have done。'
     },
@@ -97,7 +97,7 @@
     feedbackStatus.textContent='演示完成';
     feedbackTitle.textContent=`这组 ${score}／${questions.length}`;
     feedbackCopy.textContent='你刚刚走完了“作答 → 提交后反馈 → 结构复盘 → 同类题回炉”。真实工作台还会把错题写入本地记录，并按薄弱点安排后续练习。';
-    feedbackSignal.textContent='产品价值不只是判分，而是让用户知道为什么错、下一步练什么。';
+  feedbackSignal.textContent='产品价值在于解释错误，并告诉用户下一步练什么。';
     nextButton.textContent='重新体验';
     setTrace(3);
   });

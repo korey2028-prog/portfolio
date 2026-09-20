@@ -27,9 +27,9 @@
 
     <section class="case-section reveal"><p class="eyebrow">SYSTEM LOOP</p><h2>从原始材料到个性化复盘。</h2><div class="flow" aria-label="专四工作台流程"><span>OCR／结构化</span><b>→</b><span>模板化练习</span><b>→</b><span>提交后反馈</span><b>→</b><span>错题回采</span><b>→</b><span>同类题回炉</span></div></section>
 
-    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>不是单页 Demo，而是一组互相连通的训练模块。</h2><div class="deliverable-grid"><article><strong>语法与词汇</strong><p>9 个年份、180 道题；另有 627 道扩展池与按薄弱点匹配的 5 题快练。</p></article><article><strong>完形与阅读</strong><p>9 套完形；8 个年份阅读完整，2023 年仍是占位页，因此没有写成“全覆盖”。</p></article><article><strong>听写与写作</strong><p>13 套听写支持整段作答与提交后意群复盘；9 套写作支持草稿、计时与 AI 评分回填。</p></article><article><strong>持续记忆</strong><p>错题自动入库、连对 2 次标记掌握；localStorage、OPFS 与 JSON 导入导出共同兜底。</p></article></div></section>
+    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>一组互相连通的训练模块。</h2><div class="deliverable-grid"><article><strong>语法与词汇</strong><p>9 个年份、180 道题；另有 627 道扩展池与按薄弱点匹配的 5 题快练。</p></article><article><strong>完形与阅读</strong><p>9 套完形；8 个年份阅读完整，2023 年仍是占位页，因此没有写成“全覆盖”。</p></article><article><strong>听写与写作</strong><p>13 套听写支持整段作答与提交后意群复盘；9 套写作支持草稿、计时与 AI 评分回填。</p></article><article><strong>持续记忆</strong><p>错题自动入库、连对 2 次标记掌握；localStorage、OPFS 与 JSON 导入导出共同兜底。</p></article></div></section>
 
-    <section class="case-section reveal"><p class="eyebrow">AI COLLABORATION</p><h2>AI 被放在可审查的环节里。</h2><div class="case-columns"><p>Python 脚本负责批量构建，OCR 负责初步提取，Claude Code／Codex 协助实现与回归。阅读简答和写作不直接调用黑盒 API，而是生成评分 Prompt，用户在模型端运行后把 JSON 结果回填。</p><p>这条路径牺牲了一点顺滑度，但换来更低成本、无密钥暴露和可检查的评分输入。评分审计另行记录，防止字数或局部提交污染总成绩。</p></div></section>
+    <section class="case-section reveal"><p class="eyebrow">AI COLLABORATION</p><h2>AI 被放在可审查的环节里。</h2><div class="case-columns"><p>Python 脚本负责批量构建，OCR 负责初步提取，Claude Code／Codex 协助实现与回归。阅读简答和写作采用评分 Prompt，用户在模型端运行后把 JSON 结果回填。</p><p>这条路径降低成本，避免暴露密钥，也让评分输入保持可检查。评分审计另行记录，防止字数或局部提交污染总成绩。</p></div></section>
 
     <section class="case-section status-note reveal"><p class="eyebrow">VERIFIED STATUS</p><h2>当前真实状态</h2><ul><li>本地服务与首页、语法、阅读、听写、错题本、写作页面可访问。</li><li>核心模块做过浏览器烟测与评分机制审计。</li><li>2023 年阅读仍是占位骨架；2025 年完形有 4 个答案键待人工核对。</li><li>没有公开真题、音频、答案解析、作文或个人成绩。</li></ul></section>
 
