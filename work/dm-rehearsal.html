@@ -2,23 +2,23 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DM 排练系统案例：把复杂剧本、人物证据与现场 Cue 编译成可执行工作台和演员手册。">
+  <meta name="description" content="王天如的 DM 排练与角色手册案例：132 页备场手册、34 页上场朗读本，以及合成数据的 DM 控制台演示。">
   <link rel="canonical" href="https://korey2028-prog.github.io/portfolio/work/dm-rehearsal.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#0b0d10"><title>DM 排练系统｜Korey</title>
+  <meta name="theme-color" content="#0b0d10"><title>DM 排练与角色手册｜Korey</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css?v=6">
 </head>
 <body class="case-page">
   <header class="site-header" data-header><a class="brand" href="../index.html"><span class="brand-mark">K</span><span>Korey <small>AI 产品实践</small></span></a><nav class="nav" aria-label="案例导航"><a href="../index.html#work">← 全部作品</a><a href="../resume.html">简历版 ↗</a><a href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">GitHub ↗</a></nav></header>
   <main>
-    <section class="case-hero"><p class="eyebrow reveal">CASE 03 · AI WORKFLOW / CREATIVE OPS</p><h1 class="reveal">DM 排练系统</h1><p class="case-lead reveal">把几百页商业剧本、角色本、线索和演绎视频，变成 DM 与演员在排练和现场能立即调用的行动系统。</p><div class="case-fact-grid reveal"><div><span>角色</span><strong>产品设计者／DM 实际用户／领域建模者</strong></div><div><span>技术</span><strong>Next.js／TypeScript／本地文档编译</strong></div><div><span>状态</span><strong>合成数据 Demo 已验收，真实材料仅本地</strong></div></div></section>
+    <section class="case-hero"><p class="eyebrow reveal">CASE 03 · AI WORKFLOW / CREATIVE OPS</p><h1 class="reveal">DM 排练与角色手册</h1><p class="case-lead reveal">排练时需要读懂人物和剧情；真到现场，我需要一眼找到等谁、做什么、说哪句。</p><div class="case-fact-grid reveal"><div><span>角色</span><strong>DM 实际使用者／手册整理与产品设计</strong></div><div><span>技术</span><strong>Next.js／TypeScript／本地文档编译</strong></div><div><span>状态</span><strong>手册已在门店流转；控制台为合成数据演示</strong></div></div></section>
     <figure class="case-image reveal"><img src="../assets/dm-os.png" alt="DM OS 合成剧本五分钟总览界面"><figcaption>使用合成剧本的产品演示：轮次与剧透等级控制、五分钟总览和页码级回证入口。商业剧本原文与角色真相不公开。</figcaption></figure>
-    <section class="case-section reveal"><p class="eyebrow">THE PROBLEM</p><h2>AI 能总结剧情，但现场需要的是“现在能说什么”。</h2><div class="case-columns"><p>多份 PDF、角色本、主持人手册和线索之间容易冲突。纯摘要会丢失页码证据，也可能提前泄露后续真相；演员上场前更需要 Cue、动作、台词和退场条件。</p><p>我把系统拆成两个交付面：DM OS 管理故事模型、轮次与证据；演员手册把人物行动线编译成长版排练材料与短版现场卡。</p></div></section>
+    <section class="case-section reveal"><p class="eyebrow">THE PROBLEM</p><h2>长文档适合备场，不适合拿着上场</h2><div class="case-columns"><p>角色本、主持人手册和线索分散在多份材料里。准备角色时要读完整，演出时却只来得及查当前场次。普通摘要还可能丢掉页码，或提前说出后面的真相。</p><p>因此我分别做 DM 控制台和演员手册：前者查人物、轮次和原文证据；后者分成长版备场材料与短版上场提示。</p></div></section>
     <section class="case-section reveal"><p class="eyebrow">EVIDENCE PIPELINE</p><h2>每个判断都能回到原件。</h2><div class="flow"><span>PDF 逐页提取</span><b>→</b><span>页内 Chunk</span><b>→</b><span>结构化故事模型</span><b>→</b><span>Exact Quote 回证</span><b>→</b><span>按轮次防剧透</span></div></section>
-    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>从阅读系统到现场执行系统。</h2><div class="deliverable-grid"><article><strong>DM 控制台</strong><p>五分钟总览、人物动机、双时间线、关系、线索与场次控场；支持主持模式与剧透级别。</p></article><article><strong>证据链</strong><p>documentId、物理页码、chunkId、原句与哈希共同定位；残缺 OCR 不会被静默当作完整原文。</p></article><article><strong>演员手册</strong><p>人物关系、共同回忆、逐幕状态、必背台词、Cue 表和备场清单，分别服务深度排练与临场调用。</p></article><article><strong>安全降级</strong><p>不确定时回到原件；道具、流程或现场口令冲突时，以现场总控和店内确认优先。</p></article></div></section>
-    <section class="case-section reveal" id="handbook"><p class="eyebrow">ACTOR HANDBOOK</p><h2>我做的演员手册，服务排练和现场调用。</h2><div class="case-columns"><p>代表性长版演员手册达到 212 页、358 个书签项。PDF 经过元信息、严格解析、文本层、字体和 212／212 页渲染检查，没有空白页、黑页、主内容裁切或中文方框。</p><p>完整 PDF 含商业剧本内容，因此不在公开 GitHub 分发；这里展示我设计的手册结构、生产流程和验收证据。当前状态是本地已验证，店内导演定版和现场边界仍需真实排练确认。</p></div></section>
-    <section class="case-section status-note reveal"><p class="eyebrow">VERIFIED STATUS</p><h2>当前真实状态</h2><ul><li>合成六人三轮 Demo 的 typecheck、lint、build 与 62 项测试通过。</li><li>桌面与 390 px 移动端界面完成浏览器 QA。</li><li>真实商业剧本只在本地授权范围内处理；未公开原文、OCR、线索、音视频或完整手册。</li><li>真实模型 Provider 尚未做 API Key 烟测；部分剧本仍等待现场排练验收。</li></ul></section>
+    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>一份给排练，一份给现场</h2><div class="deliverable-grid"><article><strong>132 页演员手册</strong><p>按人物关系、共同回忆和逐幕状态整理角色，供备场和排练时细看。</p></article><article><strong>34 页上场朗读本</strong><p>按九幕列出等待信号、现场动作、要说的台词和停止点。门店老板已转发给其他 DM。</p></article><article><strong>DM 控制台演示</strong><p>用合成剧本展示五分钟总览、人物关系、线索和轮次控制，可调主持模式与剧透级别。</p></article><article><strong>原文回查</strong><p>通过 documentId、页码、chunkId、原句和哈希定位依据。OCR 不完整时回原件核对；现场口令以门店总控为准。</p></article></div></section>
+    <section class="case-section reveal" id="handbook"><p class="eyebrow">ACTOR HANDBOOK</p><h2>手册现在用到哪一步</h2><div class="case-columns"><p>我在离宫别院实际使用的版本是 132 页演员手册和 34 页九幕上场朗读本。长版含人物关系和备场清单，短版按幕次放 Cue、动作和台词。老板已把材料转给其他 DM；目前没有准备时间或现场失误率的统计。</p><p>另一个长版手册是 212 页、358 个书签项，检查过 PDF 元信息、文本层、字体和全部 212 页的渲染，没有发现空白页、黑页或主内容裁切。这是不同版本，仍需店内导演定版和实际排练确认；商业剧本原文及完整手册不在公开仓库分发。</p></div></section>
+    <section class="case-section status-note reveal"><p class="eyebrow">VERIFIED STATUS</p><h2>控制台演示的进度</h2><ul><li>合成六人三轮 Demo 的 typecheck、lint、build 与 62 项测试通过。</li><li>桌面与 390 px 移动端界面完成浏览器 QA。</li><li>真实商业剧本只在本地授权范围内处理；未公开原文、OCR、线索、音视频或完整手册。</li><li>真实模型 Provider 尚未做 API Key 烟测；部分剧本仍等待现场排练验收。</li></ul></section>
     <section class="case-next"><a href="../index.html#work"><span>返回首页</span><strong>查看全部 3 个案例 →</strong></a></section>
   </main><footer><span>© <span data-year></span> Korey</span><a href="../index.html">返回作品集</a></footer><script src="../script.js?v=5"></script>
 </body></html>

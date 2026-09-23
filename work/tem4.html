@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="专四备考工作台案例：从分散资料到练习、反馈、错题回炉与 AI 评分闭环。">
+  <meta name="description" content="王天如的专四备考工作台：把练习、提交后反馈和错题复习放在一起。查看界面与脱敏交互样板。">
   <link rel="canonical" href="https://korey2028-prog.github.io/portfolio/work/tem4.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#0b0d10"><title>专四备考工作台｜Korey</title>
@@ -16,20 +16,22 @@
     <section class="case-hero">
       <p class="eyebrow reveal">CASE 01 · WEB PRODUCT / EDTECH</p>
       <h1 class="reveal">专四备考工作台</h1>
-      <p class="case-lead reveal">把“我该刷什么题”重构成一个可持续反馈的问题：每次作答都留下薄弱点、复盘路径和下一次训练入口。</p>
+      <p class="case-lead reveal">备考时资料和错题笔记分散在几处。我想做一个页面，让自己练完题就能看到反馈，接着知道该复习什么。</p>
       <div class="case-fact-grid reveal"><div><span>角色</span><strong>产品发起人／真实用户／AI 协作构建者</strong></div><div><span>形态</span><strong>本地 Web 工作台</strong></div><div><span>状态</span><strong>本地可运行，未公开发布</strong></div></div>
     </section>
 
     <figure class="case-image reveal"><img src="../assets/tem4-workbench.png" alt="专四备考工作台完整首页"><figcaption>真实工作台首页。公开展示仅使用导航与模块界面，不包含购买资料、真题正文或个人学习记录。</figcaption></figure>
 
-    <section class="case-section reveal"><p class="eyebrow">THE PROBLEM</p><h2>资料并不稀缺，反馈闭环才稀缺。</h2><div class="case-columns"><p>备考资料散落在 PDF、音频与错题笔记里。普通练习页经常提前暴露答案，做完一题也不会告诉用户薄弱点是什么、下一题应该练什么。</p><p>我把产品目标定为：提交前不剧透，提交后把答案、翻译、具体考点和同类题入口放回决策位置；所有进度自动保存，允许跨年份回看。</p></div></section>
-    <section class="case-section reveal"><p class="eyebrow">TRY THE LOOP</p><h2>不要只听我介绍，亲手走一遍。</h2><div class="interaction-cta"><p>用 2 道脱敏迁移题体验“作答 → 提交后反馈 → 结构复盘 → 同类题回炉”。不读取、不保存访问者数据。</p><a class="button primary" href="../demo/tem4-loop.html">开始 60 秒交互体验</a></div></section>
+    <section class="case-section reveal"><p class="eyebrow">THE PROBLEM</p><h2>做完题后，我还要自己找解析</h2><div class="case-columns"><p>我的备考资料在 PDF、音频和错题笔记里。普通练习页有时还会提前露出答案，做完一题之后，下一步复习什么仍得自己想。</p><p>所以我把作答和反馈连在同一个页面：提交前不显示答案，提交后再看翻译、考点和同类题入口。进度会保存，可以回看不同年份的练习。</p></div></section>
+    <section class="case-section reveal"><p class="eyebrow">TRY THE LOOP</p><h2>这里可以自己做两道题</h2><div class="interaction-cta"><p>公开样板用两道脱敏迁移题演示作答、提交后反馈和同类题复习。不读取或保存访问者的个人记录。</p><a class="button primary" href="../demo/tem4-loop.html">打开交互样板</a></div></section>
 
     <section class="case-section reveal"><p class="eyebrow">SYSTEM LOOP</p><h2>从原始材料到个性化复盘。</h2><div class="flow" aria-label="专四工作台流程"><span>OCR／结构化</span><b>→</b><span>模板化练习</span><b>→</b><span>提交后反馈</span><b>→</b><span>错题回采</span><b>→</b><span>同类题回炉</span></div></section>
 
-    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>一组互相连通的训练模块。</h2><div class="deliverable-grid"><article><strong>语法与词汇</strong><p>9 个年份、180 道题；另有 627 道扩展池与按薄弱点匹配的 5 题快练。</p></article><article><strong>完形与阅读</strong><p>9 套完形；8 个年份阅读完整，2023 年仍是占位页，因此没有写成“全覆盖”。</p></article><article><strong>听写与写作</strong><p>13 套听写支持整段作答与提交后意群复盘；9 套写作支持草稿、计时与 AI 评分回填。</p></article><article><strong>持续记忆</strong><p>错题自动入库、连对 2 次标记掌握；localStorage、OPFS 与 JSON 导入导出共同兜底。</p></article></div></section>
+    <section class="case-section reveal"><p class="eyebrow">WHAT SHIPPED</p><h2>本地工作台里已经有的内容</h2><div class="deliverable-grid"><article><strong>语法与词汇</strong><p>整理了 9 个年份的 180 道语法题，还有 627 道扩展题；可以按薄弱点做 5 题快练。</p></article><article><strong>完形与阅读</strong><p>有 9 套完形，8 个年份的阅读内容已完成。2023 年阅读仍是占位页。</p></article><article><strong>听写与写作</strong><p>13 套听写可以整段作答，提交后按意群复盘；9 套写作支持草稿、计时和 AI 评分结果回填。</p></article><article><strong>错题复习</strong><p>错题自动收集，连续答对两次后标记掌握；进度通过 localStorage、OPFS 保存，也能导入导出 JSON。</p></article></div></section>
 
-    <section class="case-section reveal"><p class="eyebrow">AI COLLABORATION</p><h2>AI 被放在可审查的环节里。</h2><div class="case-columns"><p>Python 脚本负责批量构建，OCR 负责初步提取，Claude Code／Codex 协助实现与回归。阅读简答和写作采用评分 Prompt，用户在模型端运行后把 JSON 结果回填。</p><p>这条路径降低成本，避免暴露密钥，也让评分输入保持可检查。评分审计另行记录，防止字数或局部提交污染总成绩。</p></div></section>
+    <section class="case-section reveal"><p class="eyebrow">AI COLLABORATION</p><h2>AI 帮忙做了什么，我又检查了什么</h2><div class="case-columns"><p>OCR 先提取资料，Python 脚本批量生成页面，Claude Code 和 Codex 协助实现与回归。阅读简答和写作的评分在模型端运行，再把 JSON 结果填回工作台，网页不存模型密钥，也省去直接接入模型的成本。</p><p>我保留了评分输入和审计记录，检查字数计算、局部提交会不会影响总成绩。公开样板没有放真题、付费资料或个人成绩。</p></div></section>
+
+    <section class="case-section reveal"><p class="eyebrow">PERSONAL RESULT</p><h2>我自己使用后的考试结果</h2><p>使用工作台辅助备考期间，我两次正式专四成绩从 53 分提高到 69 分，后来通过考试。提分也受学习投入影响；目前没有其他用户的提分验证。</p></section>
 
     <section class="case-section status-note reveal"><p class="eyebrow">VERIFIED STATUS</p><h2>当前真实状态</h2><ul><li>本地服务与首页、语法、阅读、听写、错题本、写作页面可访问。</li><li>核心模块做过浏览器烟测与评分机制审计。</li><li>2023 年阅读仍是占位骨架；2025 年完形有 4 个答案键待人工核对。</li><li>没有公开真题、音频、答案解析、作文或个人成绩。</li></ul></section>
 

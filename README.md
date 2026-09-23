@@ -1,16 +1,16 @@
 # Korey — AI Product Portfolio
 
-**产品入口：** [Fitness OS Demo →](https://korey2028-prog.github.io/portfolio/demo/fitness-os.html) · [专四备考工作台 Demo →](https://korey2028-prog.github.io/portfolio/demo/tem4-loop.html) · [Portfolio / 完整案例 →](https://korey2028-prog.github.io/portfolio/)
+**作品入口：** [四页产品案例集 PDF](https://korey2028-prog.github.io/portfolio/assets/product-casebook-wang-tianru.pdf) · [完整案例网页](https://korey2028-prog.github.io/portfolio/) · [Fitness OS 交互样板](https://korey2028-prog.github.io/portfolio/demo/fitness-os.html) · [专四备考交互样板](https://korey2028-prog.github.io/portfolio/demo/tem4-loop.html)
 
-> **招聘导向：** 面向 AI 产品与相关岗位，重点展示 AI 产品设计、可点击交互原型，以及本地优先（Local-first）的工作流。
+> 面向产品经理岗位：先看四页 PDF，再按兴趣打开案例网页和交互样板。
 
 [在线作品集](https://korey2028-prog.github.io/portfolio/) · [GitHub Profile](https://github.com/korey2028-prog)
 
-这是一个面向 AI 产品、Agent 工作流、用户研究与内容产品岗位的公开作品集。它集中展示 3 个从真实问题出发、已经形成界面或交付物的代表项目：
+这里放了三个我实际做过的项目。每个案例都有界面或可查看的材料；完整工作台与公开样板的范围不同，详情写在对应页面。
 
-- **专四备考工作台**：把练习、提交后反馈、错题回采、同类题回炉与 AI 评分交接连成学习闭环。
-- **Fitness OS**：用 SwiftUI、HealthKit、本地 JSON 与确定性规则，把健康数据压缩成一个当日最小行动。
-- **DM 排练系统**：把复杂剧本、页码级证据、剧透边界和人物行动线编译成 DM 控制台与演员手册。
+- **专四备考工作台**：把练习、提交后反馈和错题复习放到同一条使用路径里。公开样板可体验两道脱敏题。
+- **Fitness OS**：用 SwiftUI、HealthKit 和本地 JSON 记录训练、饮食与状态；保存前核对，之后按日期回看。
+- **DM 排练与角色手册**：132 页手册供备场，34 页朗读本供上场查阅。另有使用合成剧本的控制台演示。
 
 ## Public boundary
 
