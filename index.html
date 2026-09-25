@@ -3,97 +3,369 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="王天如的产品案例：Fitness OS、专四备考工作台和 DM 角色手册。查看实际界面、使用问题与已完成的工作。">
-  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="王天如的产品案例：专四备考工作台、Fitness OS 和 DM 角色手册。查看实际界面、使用问题与已完成的工作。">
+  <meta name="theme-color" content="#07080a">
   <link rel="canonical" href="https://korey2028-prog.github.io/portfolio/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>Korey｜AI 产品作品集</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="apple-experience.css?v=3">
 </head>
 <body>
+  <!-- Ambient Atmosphere & SVG Noise Grain (Apple-grade) -->
+  <div class="ambient-mesh" aria-hidden="true">
+    <div class="ambient-aurora-1"></div>
+    <div class="ambient-aurora-2"></div>
+    <div class="ambient-aurora-3"></div>
+  </div>
+  <div class="ambient-grain" aria-hidden="true"></div>
+
   <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- Floating Frosted Glass Header -->
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Korey 作品集首页"><span class="brand-mark">K</span><span>Korey <small>AI 产品实践</small></span></a>
+    <a class="brand" href="#top" aria-label="Korey 作品集首页">
+      <span class="brand-mark">K</span>
+      <span>Korey <small>AI 产品实践</small></span>
+    </a>
     <nav class="nav" aria-label="主导航">
-      <a href="#work">代表作品</a><a href="#method">工作方式</a><a href="dark.html">个人页 ↗</a><a href="resume.html">简历版 ↗</a><a href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="#work">代表作品</a>
+      <a href="#method">工作方式</a>
+      <a href="dark.html">个人页 ↗</a>
+      <a href="resume.html">简历版 ↗</a>
+      <a href="https://github.com/korey2028-prog" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
   </header>
 
   <main id="main">
+    <!-- HERO SECTION -->
     <section class="hero" id="top">
       <div class="hero-grid">
         <div class="hero-copy reveal">
+          <div class="live-status-pill">
+            <span class="pulse-dot"></span>
+            <span>OPEN TO AI PM ROLES · 2026</span>
+            <span class="pill-divider">/</span>
+            <span class="pill-highlight">云原生实机运行中</span>
+          </div>
+
           <p class="eyebrow">王天如 · 产品经理作品</p>
-          <h1>我做过的三个工具：<span>健身记录、专四备考和 DM 排练。</span></h1>
-          <p class="hero-lead">带会员时记录散在几处，备考时做完题还得自己找解析，演出时又没时间翻长篇角色资料。我先从这些具体问题入手，再决定页面怎么排、资料怎么整理、哪里需要用户确认。AI 协助实现，我负责检查它到底能不能用。</p>
-          <div class="hero-actions"><a class="button primary" href="#work">看三个案例</a><a class="button secondary" href="assets/product-casebook-wang-tianru.pdf">下载产品案例集 PDF</a></div>
+          <h1 class="hero-title">我做过的三个工具：<span>专四备考、Fitness OS 与 DM 排练。</span></h1>
+          <p class="hero-lead">备考时做完题还得自己找解析，带会员时记录散在几处，演出时没时间翻长篇角色资料。我先从这些具体现场问题入手，再决定页面怎么排、资料怎么整理、哪里需要规则兜底与用户确认。AI 协助编码实现，我负责业务闭环与真实验收。</p>
+          <div class="hero-actions">
+            <a class="button primary magnetic-btn" href="#work">看三个案例</a>
+            <a class="button secondary magnetic-btn" href="assets/product-casebook-wang-tianru.pdf">下载产品案例集 PDF</a>
+          </div>
         </div>
-        <aside class="hero-proof reveal" aria-label="作品集摘要">
-          <p class="proof-label">THREE PROJECTS</p><div class="proof-number">03</div><p>每个案例都有界面或可查看的材料</p>
-          <ul><li><span>01</span> 专四备考工作台</li><li><span>02</span> Fitness OS</li><li><span>03</span> DM 角色手册</li></ul>
-        </aside>
+
+        <!-- Interactive Product Terminal Showcase (First Principles: Clear, Authentic, Switchable) -->
+        <div class="hero-showcase-container reveal" data-tilt-container aria-label="核心产品实机交互视窗">
+          <div class="hero-showcase-3d" data-tilt-target>
+            <div class="showcase-glare"></div>
+            
+            <div class="showcase-header">
+              <div class="showcase-dots"><span></span><span></span><span></span></div>
+              <div class="showcase-title-tag">VERIFIED PRODUCTS</div>
+              <div class="showcase-live-badge"><span class="pulse-dot" style="width:6px;height:6px;"></span> CLOUD LIVE</div>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="showcase-tabs" role="tablist">
+              <button class="showcase-tab-btn" data-stage-tab="tem4" role="tab"><span>01</span> 专四工作台</button>
+              <button class="showcase-tab-btn active" data-stage-tab="fitness" role="tab"><span>02</span> Fitness OS</button>
+              <button class="showcase-tab-btn" data-stage-tab="dm" role="tab"><span>03</span> DM 手册</button>
+            </div>
+
+            <!-- Stage Screen Area -->
+            <div class="showcase-stage-viewport">
+              <!-- Slide 1: TEM-4 -->
+              <div class="stage-slide" data-slide-id="tem4">
+                <div class="stage-browser-header">
+                  <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                  <span class="browser-url">tem4-workbench.local · 答题闭环</span>
+                </div>
+                <div class="stage-img-wrap">
+                  <img src="assets/tem4-workbench-preview.png" alt="专四备考工作台实机" loading="eager">
+                </div>
+                <div class="stage-overlay-bar">
+                  <span>9年真题 · 627道扩展池 · 错题复习闭环</span>
+                  <a href="#tem4" class="stage-link-pill">查看案例 →</a>
+                </div>
+              </div>
+
+              <!-- Slide 2: Fitness OS (Default Active) -->
+              <div class="stage-slide active" data-slide-id="fitness">
+                <div class="stage-phone-frame">
+                  <div class="phone-speaker"></div>
+                  <img src="assets/fitness-os-today.png" alt="Fitness OS iPhone 实机" loading="eager">
+                  <div class="stage-pwa-badge">
+                    <span class="pwa-dot"></span>
+                    <span>PWA 云原生实机在线</span>
+                  </div>
+                </div>
+                <div class="stage-overlay-bar">
+                  <span>HealthKit + 本地加密 + 7d 干预周期</span>
+                  <a href="/fitness/" target="_blank" class="stage-link-pill">启动 PWA ↗</a>
+                </div>
+              </div>
+
+              <!-- Slide 3: DM OS -->
+              <div class="stage-slide" data-slide-id="dm">
+                <div class="stage-browser-header">
+                  <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                  <span class="browser-url">dm-console · 演员排练系统</span>
+                </div>
+                <div class="stage-img-wrap">
+                  <img src="assets/dm-os.png" alt="DM 排练系统" loading="eager">
+                </div>
+                <div class="stage-overlay-bar">
+                  <span>132页演员手册 · 34页上场本 · 9幕现场Cue</span>
+                  <a href="#dm-handbook" class="stage-link-pill">查看案例 →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Quick Link -->
+            <div class="showcase-status-footer">
+              <span>● 纯原生构建 · 零云端依赖 · 真实项目脱敏</span>
+              <a href="resume.html" style="color:var(--apple-lime); font-weight:600;">简历速读 ↗</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="signal-row" aria-label="做项目时关注的事"><span>先看现场</span><span>记录留在本地</span><span>谁会用</span><span>用过再改</span><span>说清进度</span></div>
+
+      <div class="signal-row" aria-label="做项目时关注的事">
+        <span>先看现场</span>
+        <span>记录留在本地</span>
+        <span>谁会用</span>
+        <span>用过再改</span>
+        <span>说清进度</span>
+      </div>
     </section>
 
+    <!-- SELECTED WORK SECTION (Clean, Un-cropped, Perfect 01 -> 02 -> 03 Sequential Order) -->
     <section class="work" id="work">
-      <div class="section-heading reveal"><p class="eyebrow">SELECTED WORK</p><h2>三个项目，起点都是我自己遇到的问题。</h2><p>下面有界面、可点击样板和项目过程。完整版项目仍在本地，公开页面只放适合分享的材料。</p></div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>三个项目，起点都是我自己遇到的问题。</h2>
+        <p>每个案例都有真实界面、可交互样板与交付证据。本地源码保持私有，公开页面精选脱敏素材与实时云原生在线实机。</p>
+      </div>
 
-      <article class="project project-tem4 reveal">
-        <div class="project-media"><img src="assets/tem4-workbench-preview.png" alt="专四备考工作台脱敏首页，包含训练模块、学习进度和错题复盘入口" loading="lazy"><span class="media-note">脱敏后的真实本地工作台界面</span></div>
-        <div class="project-copy">
-          <div class="project-meta"><span>01</span><span>WEB PRODUCT · EDTECH</span></div><h3>专四备考工作台</h3>
-          <p class="project-question">做完题之后，下一步练什么？</p>
-          <p>备考时，我的资料、练习页和错题笔记分散在几个地方。我把练习入口放到一个工作台里：先作答，提交后看答案和考点，错题进入复习。后来把首页写死的考试日期和目标分改成可填写的设置。</p>
-          <dl class="metrics"><div><dt>180</dt><dd>道 9 年语法真题</dd></div><div><dt>627</dt><dd>道扩展练习池</dd></div><div><dt>13</dt><dd>套听写训练</dd></div></dl>
-          <div class="project-link-row"><a class="text-link" href="demo/tem4-loop.html">体验 60 秒交互 <span>→</span></a><a class="quiet-link" href="work/tem4.html">查看完整案例</a></div>
-        </div>
-      </article>
+      <div class="bento-container">
+        <!-- 01 PROJECT CARD: 专四备考工作台 -->
+        <article class="bento-card bento-card-full reveal" id="tem4">
+          <div class="bento-media-split">
+            <div class="browser-window-frame">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="b-title">专四备考工作台 · 本地学习闭环</span>
+              </div>
+              <img src="assets/tem4-workbench-preview.png" alt="专四备考工作台脱敏首页" loading="lazy">
+              <span class="media-note">脱敏后的真实本地工作台界面</span>
+            </div>
+          </div>
 
-      <article class="project project-fitness reveal">
-        <div class="project-media phone-media"><img src="assets/fitness-os-today.png" alt="Fitness OS iPhone 今日页面，显示当天行动、数据可信度和记录入口" loading="lazy"><span class="media-note">iOS 26 版本界面</span></div>
-        <div class="project-copy">
-          <div class="project-meta"><span>02</span><span>iOS PRODUCT · HEALTH</span></div><h3>Fitness OS</h3>
-          <p class="project-question">记录训练和饮食后，怎样方便地回看？</p>
-          <p>带会员和自己训练时，我都要同时看训练、饮食和身体状态。我把这些记录放进同一个 App：一句话输入后先核对日期和内容，确认保存，再到历史页查找。原生版还会结合 Apple Health 给出当天的行动建议。</p>
-          <dl class="metrics"><div><dt>28d</dt><dd>个人基线窗口</dd></div><div><dt>7d</dt><dd>单一干预周期</dd></div><div><dt>本地</dt><dd>记录与备份</dd></div></dl>
-          <div class="project-link-row"><a class="text-link" href="demo/fitness-os.html">体验健康决策交互 <span>→</span></a><a class="quiet-link" href="work/fitness-os.html">查看完整案例</a></div>
-        </div>
-      </article>
+          <div class="bento-content-split">
+            <div>
+              <div class="bento-tag-row">
+                <span class="bento-num">01</span>
+                <span class="bento-category">WEB PRODUCT · EDTECH</span>
+              </div>
+              <h3 class="bento-title">专四备考工作台</h3>
+              <p class="bento-question">做完题之后，下一步练什么？</p>
+              <p class="bento-desc">备考时，我的资料、练习页和错题笔记分散在几个地方。我把练习入口放到一个工作台里：先作答，提交后看答案和考点，错题进入复习池。后来把首页写死的考试日期和目标分改成可填写的设置，打通“做题-批改-回炉”单向闭环。</p>
+            </div>
 
-      <article class="project project-dm reveal">
-        <div class="project-media dm-media"><img src="assets/dm-os.png" alt="DM 排练系统五分钟总览界面，包含轮次与剧透等级控制" loading="lazy"><span class="media-note">合成剧本演示界面</span></div>
-        <div class="project-copy">
-          <div class="project-meta"><span>03</span><span>AI WORKFLOW · CREATIVE OPS</span></div><h3>DM 排练与角色手册</h3>
-          <p class="project-question">上场前，要怎样一眼找到等谁、做什么、说哪句？</p>
-          <p>在门店做 DM 时，我整理了 132 页演员手册供排练，又做了 34 页九幕上场朗读本供现场查。按幕次区分等待信号、动作和台词。门店老板已把材料转给其他 DM。</p>
-          <dl class="metrics"><div><dt>132</dt><dd>页演员手册</dd></div><div><dt>34</dt><dd>页上场朗读本</dd></div><div><dt>9</dt><dd>幕现场提示</dd></div></dl>
-          <a class="text-link" href="work/dm-rehearsal.html#handbook">查看 DM 手册案例 <span>→</span></a>
-        </div>
-      </article>
-    </section>
+            <div>
+              <dl class="bento-metrics">
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="180" data-suffix="道">180</span>
+                  <dd class="bento-metric-label">9 年语法真题</dd>
+                </div>
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="627" data-suffix="道">627</span>
+                  <dd class="bento-metric-label">扩展练习池</dd>
+                </div>
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="13" data-suffix="套">13</span>
+                  <dd class="bento-metric-label">听写训练</dd>
+                </div>
+              </dl>
 
-    <section class="method" id="method">
-      <div class="section-heading reveal"><p class="eyebrow">HOW I WORK</p><h2>我怎么把想法做成可用的东西</h2></div>
-      <div class="method-grid">
-        <article class="reveal"><span>01</span><h3>先看现场</h3><p>带会员、自己备考、做 DM 时，先记下具体在哪一步卡住，再决定要做什么功能。</p></article>
-        <article class="reveal"><span>02</span><h3>想清楚谁会用</h3><p>页面先放眼前需要的内容。也会借鉴 Don’t be silent 的方法，考虑流量从哪来、谁愿意付费、第一单能不能成立。</p></article>
-        <article class="reveal"><span>03</span><h3>让 AI 帮忙实现</h3><p>把要改的页面、需要保留的内容和验收方式写清楚，再交给 Claude Code 或 Codex 做。</p></article>
-        <article class="reveal"><span>04</span><h3>自己动手检查</h3><p>页面能打开只是开始。我会按用户实际操作的顺序点一遍，核对保存、回看和异常状态。</p></article>
-        <article class="reveal"><span>05</span><h3>说清做到哪一步</h3><p>本地能运行、公开有样板、真机用过、外部用户验证，是不同的进度。</p></article>
+              <div class="project-link-row">
+                <a class="button primary magnetic-btn" href="demo/tem4-loop.html" style="padding: 9px 18px; font-size: 0.88rem; border-radius: 999px;">
+                  体验 60 秒交互 <span>→</span>
+                </a>
+                <a class="quiet-link" href="work/tem4.html">查看完整案例</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 PROJECT CARD: Fitness OS -->
+        <article class="bento-card bento-card-full reveal" id="fitness-os">
+          <div class="bento-media-split">
+            <div class="phone-showcase-frame">
+              <img src="assets/fitness-os-today.png" alt="Fitness OS iPhone 今日页面" loading="lazy">
+              <span class="media-note">iOS 26 原生 + 云原生 PWA 多端支持</span>
+            </div>
+          </div>
+
+          <div class="bento-content-split">
+            <div>
+              <div class="bento-tag-row">
+                <span class="bento-num">02</span>
+                <span class="bento-category">iOS PRODUCT · CLOUD-NATIVE PWA · HEALTH</span>
+              </div>
+              <h3 class="bento-title">Fitness OS</h3>
+              <p class="bento-question">记录训练和饮食后，怎样方便地回看？</p>
+              <p class="bento-desc">带会员和自己训练时，我都要同时看训练、饮食和身体状态。我把这些记录放进同一个 App：一句话输入后先核对日期和内容，确认保存，再到历史页查找。原生版结合 Apple Health 给出当天最小行动建议。现已独立完成阿里云 Linux 生产环境部署（FastAPI + PWA 离线打卡），接入 Cloudflare 边缘加速与自动化容灾备份。</p>
+            </div>
+
+            <div>
+              <dl class="bento-metrics">
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="28" data-suffix="d">28d</span>
+                  <dd class="bento-metric-label">个人基线窗口</dd>
+                </div>
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="7" data-suffix="d">7d</span>
+                  <dd class="bento-metric-label">单一干预周期</dd>
+                </div>
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" style="font-size: 1.55rem; letter-spacing: -0.02em;">本地+云端</span>
+                  <dd class="bento-metric-label">离线PWA与容灾备份</dd>
+                </div>
+              </dl>
+
+              <div class="project-link-row">
+                <a class="button primary magnetic-btn" href="/fitness/" style="padding: 9px 18px; font-size: 0.88rem; border-radius: 999px;">
+                  🚀 启动在线 PWA 实机系统 <span>→</span>
+                </a>
+                <a class="text-link magnetic-btn" href="demo/fitness-os.html">60秒交互 <span>→</span></a>
+                <a class="quiet-link" href="work/fitness-os.html">查看完整案例</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 PROJECT CARD: DM 排练与角色手册 -->
+        <article class="bento-card bento-card-full reveal" id="dm-handbook">
+          <div class="bento-media-split">
+            <div class="browser-window-frame dm-frame">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="b-title">DM 排练控制台 · 合成剧本演示</span>
+              </div>
+              <img src="assets/dm-os.png" alt="DM 排练系统五分钟总览界面" loading="lazy">
+              <span class="media-note">合成剧本演示界面</span>
+            </div>
+          </div>
+
+          <div class="bento-content-split">
+            <div>
+              <div class="bento-tag-row">
+                <span class="bento-num">03</span>
+                <span class="bento-category">AI WORKFLOW · CREATIVE OPS</span>
+              </div>
+              <h3 class="bento-title">DM 排练与角色手册</h3>
+              <p class="bento-question">上场前，要怎样一眼找到等谁、做什么、说哪句？</p>
+              <p class="bento-desc">在门店做 DM 时，我整理了 132 页演员手册供排练，又做了 34 页九幕上场朗读本供现场查。按幕次区分等待信号、动作和台词。门店老板已把材料转给其他 DM。把繁复长篇资料压缩成交付级现场索引。</p>
+            </div>
+
+            <div>
+              <dl class="bento-metrics">
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="132" data-suffix="页">132</span>
+                  <dd class="bento-metric-label">演员手册</dd>
+                </div>
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="34" data-suffix="页">34</span>
+                  <dd class="bento-metric-label">上场朗读本</dd>
+                </div>
+                <div class="bento-metric-item">
+                  <span class="bento-metric-val" data-count="9" data-suffix="幕">9</span>
+                  <dd class="bento-metric-label">现场提示</dd>
+                </div>
+              </dl>
+
+              <div class="project-link-row">
+                <a class="button primary magnetic-btn" href="work/dm-rehearsal.html#handbook" style="padding: 9px 18px; font-size: 0.88rem; border-radius: 999px;">
+                  查看 DM 手册案例 <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- METHOD SECTION -->
+    <section class="method" id="method">
+      <div class="section-heading reveal">
+        <p class="eyebrow">HOW I WORK</p>
+        <h2>我怎么把想法做成可用的东西</h2>
+      </div>
+      <div class="method-grid">
+        <article class="reveal">
+          <span>01</span>
+          <h3>先看现场</h3>
+          <p>带会员、自己备考、做 DM 时，先记下具体在哪一步卡住，再决定要做什么功能。</p>
+        </article>
+        <article class="reveal">
+          <span>02</span>
+          <h3>想清楚谁会用</h3>
+          <p>页面先放眼前需要的内容。也会借鉴 Don’t be silent 的方法，考虑流量从哪来、谁愿意付费、第一单能不能成立。</p>
+        </article>
+        <article class="reveal">
+          <span>03</span>
+          <h3>让 AI 帮忙实现</h3>
+          <p>把要改的页面、需要保留的内容和验收方式写清楚，再交给 Claude Code 或 Codex 做。</p>
+        </article>
+        <article class="reveal">
+          <span>04</span>
+          <h3>自己动手检查</h3>
+          <p>页面能打开只是开始。我会按用户实际操作的顺序点一遍，核对保存、回看和异常状态。</p>
+        </article>
+        <article class="reveal">
+          <span>05</span>
+          <h3>说清做到哪一步</h3>
+          <p>本地能运行、公开有样板、真机用过、外部用户验证，是不同的进度。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLOSING SECTION (Obsidian Glass Banner) -->
     <section class="closing">
-      <div class="closing-copy reveal"><p class="eyebrow">LOOKING FOR</p><h2>我在找产品经理相关的工作机会</h2><p>目前关注 AI 产品、Agent 工作流、用户研究和内容产品方向，也在公开验证单页个人主页与活动落地页服务。想进一步看项目过程，可以打开案例页或下载四页 PDF。</p></div>
-      <div class="closing-actions"><a class="button primary reveal" href="mailto:korey2028@gmail.com">发邮件联系我</a><a class="button secondary reveal" href="assets/product-casebook-wang-tianru.pdf">下载案例集 PDF</a></div>
+      <div class="closing-copy reveal">
+        <p class="eyebrow">LOOKING FOR</p>
+        <h2>我在找产品经理相关的工作机会</h2>
+        <p>目前关注 AI 产品、Agent 工作流、用户研究和内容产品方向，也在公开验证单页个人主页与活动落地页服务。想进一步看项目过程，可以打开案例页或下载四页 PDF。</p>
+      </div>
+      <div class="closing-actions">
+        <a class="button primary magnetic-btn reveal" href="mailto:korey2028@gmail.com">发邮件联系我</a>
+        <a class="button secondary magnetic-btn reveal" href="assets/product-casebook-wang-tianru.pdf">下载案例集 PDF</a>
+      </div>
     </section>
   </main>
 
-  <footer><span>© <span data-year></span> Korey</span><span>Built from real projects · No private data published</span></footer>
-  <script src="script.js?v=5"></script>
+  <!-- APPLE-GRADE FOOTER -->
+  <footer style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; padding: 40px 0 60px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1080px; flex-wrap: wrap; gap: 14px;">
+      <span style="font-weight: 500;">© <span data-year></span> Korey (王天如) · AI Product Portfolio</span>
+      <span class="cloud-status-badge">
+        <span class="cloud-status-dot"></span>
+        ECS 云原生高可用运行中 · Cloudflare 边缘加速 · PWA 离线支持
+      </span>
+    </div>
+    <div style="font-size: 0.75rem; color: #64748b; font-family: var(--font-mono);">
+      Built from real projects · Apple Liquid Glass Experience · No private data published
+    </div>
+  </footer>
+
+  <script src="script.js?v=7"></script>
 </body>
 </html>

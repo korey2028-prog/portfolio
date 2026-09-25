@@ -1,0 +1,904 @@
+/* =========================================================
+   Apple-grade Aesthetic & Micro-interactions (v3)
+   First-Principles & Adversarial Design Refactor
+   Crafted for Korey Portfolio
+   ========================================================= */
+
+:root {
+  --apple-bg: #07080a;
+  --apple-surface: rgba(18, 21, 26, 0.72);
+  --apple-surface-hover: rgba(26, 31, 39, 0.85);
+  --apple-border: rgba(255, 255, 255, 0.08);
+  --apple-border-highlight: rgba(255, 255, 255, 0.22);
+  --apple-glow: rgba(93, 139, 255, 0.15);
+  --apple-lime: #b9ff5a;
+  --apple-lime-glow: rgba(185, 255, 90, 0.35);
+  --apple-cyan: #5be7ff;
+  --apple-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+/* Ensure Hero layout is compact and punchy */
+.hero {
+  min-height: auto !important;
+  padding: 56px 0 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 36px !important;
+}
+
+.hero-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.95fr) !important;
+  gap: clamp(36px, 6vw, 80px) !important;
+  align-items: center !important;
+}
+
+.hero-title {
+  font-size: clamp(2.3rem, 4.4vw, 4.4rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.04em !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+  text-wrap: balance !important;
+  margin: 0 !important;
+}
+
+.hero-title span {
+  display: block;
+  margin-top: 8px;
+  color: #9da5af !important;
+}
+
+/* Ambient Background & SVG Grain */
+.ambient-mesh {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--apple-bg);
+}
+
+.ambient-aurora-1 {
+  position: absolute;
+  top: -15%;
+  right: 10%;
+  width: 55vw;
+  height: 55vw;
+  max-width: 850px;
+  max-height: 850px;
+  background: radial-gradient(circle, rgba(91, 231, 255, 0.07) 0%, rgba(185, 255, 90, 0.04) 45%, transparent 70%);
+  filter: blur(90px);
+  border-radius: 50%;
+  animation: auroraFloat1 20s var(--apple-spring) infinite alternate;
+}
+
+.ambient-aurora-2 {
+  position: absolute;
+  top: 35%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 750px;
+  max-height: 750px;
+  background: radial-gradient(circle, rgba(185, 255, 90, 0.06) 0%, rgba(93, 139, 255, 0.05) 50%, transparent 75%);
+  filter: blur(100px);
+  border-radius: 50%;
+  animation: auroraFloat2 25s var(--apple-spring) infinite alternate;
+}
+
+.ambient-aurora-3 {
+  position: absolute;
+  bottom: -10%;
+  right: 15%;
+  width: 60vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(74, 222, 128, 0.04) 0%, rgba(91, 231, 255, 0.03) 50%, transparent 70%);
+  filter: blur(110px);
+  border-radius: 50%;
+}
+
+.ambient-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@keyframes auroraFloat1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 60px) scale(1.08); }
+  100% { transform: translate(30px, -30px) scale(0.95); }
+}
+
+@keyframes auroraFloat2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -50px) scale(1.1); }
+  100% { transform: translate(-30px, 40px) scale(0.92); }
+}
+
+/* Floating Glass Header */
+.site-header {
+  position: sticky;
+  top: 16px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(calc(100% - 32px), var(--max));
+  margin: 14px auto 0;
+  padding: 12px 24px;
+  background: rgba(13, 16, 21, 0.65) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  transition: all 0.35s var(--apple-spring) !important;
+}
+
+.site-header.scrolled {
+  background: rgba(10, 12, 16, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
+}
+
+.brand-mark {
+  box-shadow: 0 0 18px var(--apple-lime-glow);
+}
+
+/* Live Status Pulse Badge */
+.live-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 14px 5px 10px;
+  margin-bottom: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #d1d5db;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.pulse-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid #22c55e;
+  opacity: 0.8;
+  animation: pulseRipple 2s ease-out infinite;
+}
+
+@keyframes pulseRipple {
+  0% { transform: scale(0.9); opacity: 0.9; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.pill-divider {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 300;
+}
+
+.pill-highlight {
+  color: var(--apple-lime);
+  font-weight: 700;
+}
+
+/* =========================================================
+   HERO INTERACTIVE PRODUCT TERMINAL SHOWCASE
+   First Principles: Functional, Legible, Interactive Switcher
+   ========================================================= */
+
+.hero-showcase-container {
+  position: relative;
+  perspective: 1200px;
+  width: 100%;
+  max-width: 480px;
+  justify-self: end;
+}
+
+.hero-showcase-3d {
+  position: relative;
+  width: 100%;
+  padding: 22px;
+  background: linear-gradient(160deg, rgba(24, 29, 38, 0.85) 0%, rgba(12, 15, 20, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 26px;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.65),
+    0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.hero-showcase-3d:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 40px 100px rgba(0, 0, 0, 0.75),
+    0 0 35px rgba(91, 231, 255, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+.showcase-glare {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.08), transparent 75%);
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-showcase-3d:hover .showcase-glare {
+  opacity: 1;
+}
+
+.showcase-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.showcase-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.showcase-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.showcase-dots span:nth-child(1) { background: #ef4444; }
+.showcase-dots span:nth-child(2) { background: #eab308; }
+.showcase-dots span:nth-child(3) { background: #22c55e; }
+
+.showcase-title-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--apple-lime);
+  font-weight: 700;
+}
+
+.showcase-live-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #4ade80;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Apple Segmented Tab Switcher */
+.showcase-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.showcase-tab-btn {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #9da5af;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s var(--apple-spring);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.showcase-tab-btn span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.showcase-tab-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.showcase-tab-btn.active {
+  color: #07080a;
+  background: var(--apple-lime);
+  box-shadow: 0 4px 12px var(--apple-lime-glow);
+}
+
+.showcase-tab-btn.active span {
+  opacity: 1;
+}
+
+/* Viewport for Product Stage Slides */
+.showcase-stage-viewport {
+  position: relative;
+  height: 290px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.stage-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.96);
+  transition: opacity 0.35s ease, transform 0.35s var(--apple-spring);
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* Browser Frame in Slide */
+.stage-browser-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(22, 27, 34, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.browser-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.browser-url {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #8b949e;
+  margin-left: 8px;
+}
+
+.stage-img-wrap {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.stage-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Phone Frame in Slide */
+.stage-phone-frame {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  background: radial-gradient(circle at 50% 30%, rgba(91, 231, 255, 0.12), #07080a 75%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-phone-frame img {
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+
+.stage-pwa-badge {
+  position: absolute;
+  bottom: 16px;
+  padding: 4px 12px;
+  background: rgba(11, 13, 16, 0.9);
+  border: 1px solid var(--apple-lime);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--apple-lime);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.stage-overlay-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(13, 16, 22, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+  color: #c4c9cf;
+}
+
+.stage-link-pill {
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.stage-link-pill:hover {
+  background: var(--apple-lime);
+  color: #07080a;
+  border-color: var(--apple-lime);
+}
+
+.showcase-status-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.72rem;
+  color: #8b949e;
+}
+
+/* =========================================================
+   BENTO GRID SYSTEM: PERFECT 01 -> 02 -> 03 SEQUENTIAL FLOW
+   First Principles: Large, Clear, Un-cropped Master Cards
+   ========================================================= */
+
+.bento-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.bento-card-full {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  min-height: 520px;
+  background: linear-gradient(160deg, rgba(22, 27, 34, 0.7) 0%, rgba(13, 16, 22, 0.88) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s var(--apple-spring), border-color 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+/* Subtle Spotlight Hover */
+.bento-card-full::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    550px circle at var(--mouse-x, -300px) var(--mouse-y, -300px),
+    rgba(255, 255, 255, 0.07),
+    transparent 80%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.bento-card-full:hover::before {
+  opacity: 1;
+}
+
+.bento-card-full:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 30px 75px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(185, 255, 90, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.bento-media-split {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 36px;
+  background: rgba(10, 13, 17, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+/* Device Frames: Browser */
+.browser-window-frame {
+  width: 100%;
+  max-width: 580px;
+  background: #111419;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #161b22;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.b-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.b-dot:nth-child(1) { background: #ef4444; }
+.b-dot:nth-child(2) { background: #eab308; }
+.b-dot:nth-child(3) { background: #22c55e; }
+
+.b-title {
+  margin-left: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #8b949e;
+}
+
+.browser-window-frame img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Device Frames: iPhone */
+.phone-showcase-frame {
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 24px;
+  width: 100%;
+}
+
+.phone-showcase-frame img {
+  max-height: 440px;
+  object-fit: contain;
+  border-radius: 36px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75), 0 0 35px rgba(91, 231, 255, 0.15);
+  transition: transform 0.5s var(--apple-spring);
+}
+
+.bento-card-full:hover .phone-showcase-frame img {
+  transform: scale(1.03);
+}
+
+/* Content Split */
+.bento-content-split {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(34px, 5vw, 54px);
+}
+
+.bento-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.bento-num {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--apple-lime);
+  color: #07080a;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 0 12px var(--apple-lime-glow);
+}
+
+.bento-category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9da5af;
+  letter-spacing: 0.1em;
+}
+
+.bento-title {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.bento-question {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+  font-weight: 650;
+  line-height: 1.45;
+  color: #f3f5f7;
+}
+
+.bento-desc {
+  margin: 0;
+  color: #9da5af;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+/* Metric Display with Number Counter Support */
+.bento-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0 24px;
+}
+
+.bento-metric-item {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bento-metric-val {
+  display: inline-block;
+  color: var(--apple-lime);
+  font-size: clamp(1.6rem, 2.3vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum";
+}
+
+.bento-metric-label {
+  margin: 4px 0 0;
+  color: #9da5af;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+/* Magnetic Buttons & Interactive Links */
+.magnetic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s var(--apple-spring), background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.button.primary {
+  box-shadow: 0 4px 20px var(--apple-lime-glow);
+}
+
+.button.primary:hover {
+  box-shadow: 0 8px 30px rgba(185, 255, 90, 0.55);
+}
+
+/* Method Grid Elevation */
+.method-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.method-grid article {
+  position: relative;
+  padding: 30px 24px 28px !important;
+  background: linear-gradient(160deg, rgba(22, 27, 34, 0.6) 0%, rgba(13, 16, 22, 0.75) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 22px !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.35s var(--apple-spring) !important;
+  overflow: hidden;
+}
+
+.method-grid article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.method-grid article > span {
+  display: inline-block;
+  padding: 3px 8px;
+  background: rgba(185, 255, 90, 0.1);
+  border: 1px solid rgba(185, 255, 90, 0.25);
+  border-radius: 6px;
+  color: var(--apple-lime) !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.method-grid h3 {
+  margin: 24px 0 10px !important;
+  font-size: 1.25rem !important;
+  color: #fff !important;
+  letter-spacing: -0.03em;
+}
+
+/* Closing Banner Elevation (Obsidian Glass) */
+.closing {
+  background: linear-gradient(135deg, rgba(24, 29, 38, 0.85) 0%, rgba(12, 15, 20, 0.95) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.closing::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 55%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(185, 255, 90, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.closing .eyebrow {
+  color: var(--apple-lime) !important;
+}
+
+.closing-copy h2 {
+  color: #fff !important;
+}
+
+.closing-copy p:last-child {
+  color: #9da5af !important;
+}
+
+.closing-actions .button.primary {
+  color: #07080a !important;
+  background: var(--apple-lime) !important;
+  border-color: var(--apple-lime) !important;
+}
+
+.closing-actions .button.secondary {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.closing-actions .button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+/* Resume Page Precision Glass */
+.resume-summary > div, .resume-signal, .resume-work-item, .resume-handbook, .resume-boundary {
+  position: relative;
+  background: linear-gradient(160deg, rgba(22, 27, 34, 0.7) 0%, rgba(13, 16, 22, 0.85) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.3s var(--apple-spring), border-color 0.3s ease !important;
+  overflow: hidden;
+}
+
+.resume-summary > div:hover, .resume-signal:hover, .resume-work-item:hover, .resume-handbook:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+.resume-work-number {
+  box-shadow: 0 0 14px var(--apple-lime-glow) !important;
+}
+
+/* Footer Cloud Status Enhancement */
+.cloud-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.82rem;
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.08);
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 197, 94, 0.22);
+  box-shadow: 0 0 16px rgba(34, 197, 94, 0.1);
+  font-family: var(--font-mono);
+}
+
+.cloud-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* Responsive Overrides */
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-showcase-container {
+    max-width: 100%;
+    margin-top: 36px;
+    justify-self: center;
+  }
+  .bento-card-full {
+    grid-template-columns: 1fr;
+  }
+  .bento-media-split {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    width: min(calc(100% - 24px), var(--max));
+    padding: 10px 18px;
+    border-radius: 999px;
+  }
+  .bento-metrics {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .showcase-stage-viewport {
+    height: 240px;
+  }
+}
