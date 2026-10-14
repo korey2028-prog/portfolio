@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Korey · AI Product</title><desc id="desc">Silver-white brushed-metal visual identity with an ice-blue accent.</desc>
+  <defs>
+    <linearGradient id="silver" x2="1" y2=".65"><stop stop-color="#fbfdfe"/><stop offset=".45" stop-color="#d6dee5"/><stop offset=".65" stop-color="#f9fbfd"/><stop offset="1" stop-color="#dce7ef"/></linearGradient>
+    <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 .5H4" stroke="#fff" stroke-opacity=".22"/></pattern>
+  </defs>
+  <rect width="1200" height="300" rx="22" fill="url(#silver)"/>
+  <rect width="1200" height="300" rx="22" fill="url(#lines)"/>
+  <rect x="26" y="26" width="1148" height="248" rx="14" fill="none" stroke="#fff" stroke-opacity=".8"/>
+  <path d="M890 70h210M950 90h150M1020 110h80" stroke="#8bb9d6" stroke-width="2"/>
+  <circle cx="1090" cy="72" r="5" fill="#548db3"/>
+  <text x="65" y="139" font-family="Helvetica,Arial,sans-serif" font-size="76" font-weight="500" letter-spacing="2" fill="#2a3946">KOREY</text>
+  <text x="70" y="184" font-family="Helvetica,Arial,sans-serif" font-size="20" letter-spacing="4" fill="#486277">AI PRODUCT · LEARNING · CREATIVE SYSTEMS</text>
+  <path d="M70 220H1130" stroke="#9fafbc" stroke-opacity=".55"/>
+</svg>
