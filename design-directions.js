@@ -15,7 +15,7 @@
   ];
   const actions = '<div class="actions"><a class="primary" href="resume.html">HR / 简历与项目速读 ↗</a><a href="fitness/">看 Fitness OS 演示 ↗</a></div>';
   const identity = '<p class="eyebrow">王天如 / KOREY · 2027 届</p>';
-  const role = '<p class="role">AI 产品实习 · Agent 工作流 · 内容工具</p>';
+  const role = '<p class="role">AI 产品经理 · Agent 工作流 · 内容工具</p>';
   const ownership = '<p class="ownership">我负责问题定义、流程设计与实际验收，AI 协助编码实现。</p>';
   const metal = '<div class="metal-object" aria-hidden="true"><span>K</span><i></i></div>';
   const phone = '<figure class="phone"><img src="assets/fitness-os-today.png" alt="Fitness OS 原生 iPhone 今日页面"><figcaption>原生 iPhone 版界面</figcaption></figure>';
