@@ -1,0 +1,72 @@
+/* Korey silver identity. Loaded last to keep layouts and interactions intact. */
+:root {
+  color-scheme: light;
+  --bg: #f1f3f5; --panel: #fcfdfe; --text: #26323d; --muted: #536270;
+  --line: #c5ced6; --accent: #245f87;
+  --apple-bg: #f1f3f5; --apple-surface: rgba(255,255,255,.8);
+  --apple-surface-hover: #fff; --apple-border: #cbd3db;
+  --apple-border-highlight: #acbac6; --apple-glow: rgba(137,187,215,.16);
+  --apple-lime: #245f87; --apple-lime-glow: rgba(90,154,195,.15); --apple-cyan: #245f87;
+  --bg-deep: #edf0f3; --bg-2: #e5ebef;
+  --glass-1: rgba(255,255,255,.65); --glass-2: rgba(255,255,255,.8);
+  --glass-3: #fff; --glass-nav: rgba(248,250,252,.92);
+  --line-1: #d5dce2; --line-2: #c7d0d8; --line-3: #b3c0cb; --line-bright: #99b0c1;
+  --ink: #25313b; --ink-2: #344553; --ink-3: #536270; --ink-4: #5c6974; --ink-5: #6c7883;
+  --accent-soft: #e0edf5; --accent-glow: rgba(96,159,199,.18);
+}
+html, body { background: #f1f3f5 !important; color: #26323d !important; }
+body { background: radial-gradient(ellipse at 85% 0%,#fff 0%,transparent 55%),linear-gradient(135deg,#f8fafb,#e5eaee) !important; }
+::selection { background: #c8e4f4; color: #17374d; }
+.reveal { opacity: 1 !important; transform: none !important; }
+.reveal { filter: none !important; }
+.hero { background: transparent !important; }
+.hero .display,.hero .lede { text-shadow: none !important; }
+.hero::before,.hero::after { background: none !important; animation: none !important; }
+.display,.display-em { color: #26323d !important; -webkit-text-fill-color: #26323d !important; }
+.lede,.hero .lede { color: #536270 !important; }
+.hero .eyebrow,.social-proof,.delivery-strip,.device,.exam-card,.dag-frame,.social-phone { background: #edf2f6 !important; color: #344553 !important; border-color: #c5ced6 !important; }
+.pulse-dot { animation: none !important; }
+.showcase-dots span,.browser-dot { background: #a0afbc !important; }
+.ambient-mesh,.ambient { background: transparent !important; }
+.ambient-aurora-1,.ambient-aurora-2,.ambient-aurora-3,.aurora,.vignette,.showcase-glare { display: none !important; }
+.ambient-grain,.grain { opacity: .018 !important; }
+.site-header,.nav-pill { background: rgba(248,250,252,.94) !important; border-color: #cbd3db !important; box-shadow: 0 10px 35px #4055680b !important; }
+.brand-mark { background: linear-gradient(135deg,#fff,#c4ced7,#f4f7fa) !important; color: #344553 !important; border: 1px solid #b7c3ce; }
+.nav-lang-btn { background: #e6ecf1 !important; border-color: #bbc8d3 !important; color: #344553 !important; }
+.hero-title,.bento-title,.bento-question,.method-grid h3,.closing-copy h2,.section-heading h2 { color: #26323d !important; }
+.hero-title span { color: #536270 !important; }
+.hero-lead,.bento-desc,.bento-category,.bento-metric-label,.closing-copy p:last-child { color: #536270 !important; }
+.hero-showcase-3d,.bento-card,.method-grid article,.closing,.hero-proof,
+.resume-summary>div,.resume-signal,.resume-work-item,.resume-handbook,.resume-boundary,
+.interaction-cta,.case-panel,.case-card {
+  background: linear-gradient(140deg,#ffffffed,#e8edf2ed) !important;
+  color: #26323d !important; border-color: #c5ced6 !important;
+  box-shadow: inset 0 1px 0 #fff,0 15px 50px #32485c0b !important;
+}
+.closing::before { background: radial-gradient(circle,#c3dceb66,transparent 70%) !important; }
+.showcase-header,.showcase-tabs,.showcase-status-footer,.stage-browser-header,.stage-overlay-bar {
+  background: #e5ebf0 !important; color: #344553 !important; border-color: #c5ced6 !important;
+}
+.showcase-stage-viewport,.bento-media-split,.bento-media,.project-media { background: #dce3e9 !important; }
+.showcase-title-tag,.showcase-status-footer,.browser-url { color: #536270 !important; }
+.showcase-tab-btn { color: #536270 !important; }
+.showcase-tab-btn.active { color: #245f87 !important; background: #fff !important; border-color: #b8cbd9 !important; }
+.button.primary,.closing-actions .button.primary,.btn-primary,.nav-action {
+  background: linear-gradient(145deg,#e6f3fb,#c5ddeb) !important;
+  color: #194968 !important; border: 1px solid #9ebdd0 !important;
+  box-shadow: inset 0 1px 0 #fff,0 4px 12px #51789114 !important;
+}
+.button.secondary,.closing-actions .button.secondary { background: #f8fafb !important; color: #344553 !important; border-color: #b7c5d0 !important; }
+.bento-num,.resume-work-number,.project-meta span:first-child { background: #dbe9f2 !important; color: #245f87 !important; }
+.live-status-pill,.cloud-status-badge,.showcase-live-badge,.stage-pwa-badge,.stage-link-pill,.pwa-badge {
+  color: #245f87 !important; background: #e1edf5 !important; border-color: #afc8d9 !important;
+}
+.pulse-dot,.cloud-status-dot,.pwa-dot,.eyebrow-dot,.brand-dot { background: #639bc1 !important; box-shadow: 0 0 0 4px #8bc1e322 !important; }
+.pill-highlight,.bento-metric-val,.eyebrow,.closing .eyebrow { color: #245f87 !important; }
+.method-grid article>span { background: #e1edf5 !important; color: #245f87 !important; }
+.resume-summary ul,.resume-boundary p,.interaction-cta p { color: #344553 !important; }
+.stage-phone-frame { background: #dbe2e8 !important; border-color: #bac5cf !important; }
+.stage-phone-frame img,.phone-showcase-frame img { box-shadow: 0 18px 45px #263f5530 !important; }
+:focus-visible { outline: 3px solid #28678f !important; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; } }
+@media print { html,body { background: #fff !important; } }
