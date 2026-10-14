@@ -1,5 +1,15 @@
 # Korey Portfolio Handoff
 
+## 2026-10-14：全量产品经理身份与内容数据发布
+
+用户明确要求所有对外身份统一为 `KOREY WANG TIANRU / 产品经理`，不再使用“AI 产品实习”等称谓；内容部分只保留 `2.17K+` 粉丝、`31 万+` 单条最高播放、`4.1 万+` 单条最高点赞，不展示平台名、账号名或账号截图。
+
+作品集提交 `04b5df90b58cd25be1300a75bc4f96a91a1397f7` 已推送到 `portfolio/main`；GitHub Profile 提交 `bbb7693231fe` 已推送到 `korey2028-prog/main`。GitHub 账户显示名、简介、主页链接和两个仓库描述已同步为产品经理定位。Profile 的项目入口统一指向 `https://korey2028.tech/`。
+
+自定义域名仍由独立服务器 `/data/apps/portfolio` 承载，不会随 GitHub Pages 自动更新。本轮将 10 个展示文件原子发布，旧文件备份在 `/data/releases/portfolio-product-manager-20261014-v1/before/`；公开的 `assets/douyin-profile.jpg` 已移入该备份目录。未修改 `/data/apps/fitness-web`、服务配置或用户数据。
+
+线上回读：GitHub Pages 构建成功；`korey2028.tech` 首页、简历、dark、三个案例、专四 Demo 和案例集 PDF 均返回 200，自媒体截图返回 404。简历在 1440 px 与 390 px 下无横向溢出、控制台 0 错误，公开 GitHub 主页显示新姓名与产品经理简介且不再出现“AI 产品实习”。
+
 Updated: 2026-09-04
 
 ## Current Public Site
